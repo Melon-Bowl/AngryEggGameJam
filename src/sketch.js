@@ -1,5 +1,9 @@
-const text_to_show = `Hey guys, did you know that in terms of male human and female Pokémon breeding, Vaporeon is the most compatible Pokémon for humans? Not only are they in the field egg group, which is mostly comprised of mammals, Vaporeon are an average of 3”03’ tall and 63.9 pounds, this means they’re large enough to be able handle human dicks, and with their impressive Base Stats for HP and access to Acid Armor, you can be rough with one.`;
 const text_ui = new TextBox();
+const characters = [new Character('Amogus', { neutral: 'assets/amogus.png' })];
+const chapters = [
+  new Chapter({ text_ui, characters, file: 'src/chapters/1.json' })
+];
+let current_chapter = 0;
 
 // CUSTOM FUNCTIONS
 function rollDice() {
@@ -17,7 +21,10 @@ function preload() {
   dice_4 = loadImage('assets/dice/4.png');
   dice_5 = loadImage('assets/dice/5.png');
   dice_6 = loadImage('assets/dice/6.png');
+
   text_ui.preload();
+  characters.forEach(c => c.preload());
+  chapters.forEach(c => c.preload());
 }
 
 function mouseClicked() {
@@ -26,11 +33,10 @@ function mouseClicked() {
 
 function setup() {
   createCanvas(800, 600);
-  text_ui.show_text('Me', text_to_show);
+  // chapters[current_chapter].start();
 }
 
 function draw() {
   background(220);
-  text_ui.show();
-  image(dice_1, 650, 80, 100, 100);
+  chapters[current_chapter].show();
 }

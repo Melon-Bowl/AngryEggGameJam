@@ -1,0 +1,32 @@
+[
+  {
+    "type": "sub",
+    "target": "Amogus",
+    "position": 0
+  },
+  {
+    "type": "speech",
+    "target": "Amogus",
+    "text": "Hello, how are you doing?"
+  },
+  {
+    "type": "speech",
+    "target": "Amogus",
+    "text": "That's great! I also believe that we must raise taxes on single mothers. Particularly the struggling kind, haha!"
+  },
+  {
+    "type": "sub",
+    "target": null,
+    "position": 0
+  },
+  {
+    "type": "sub",
+    "target": "Amogus",
+    "position": 1
+  },
+  {
+    "type": "speech",
+    "target": "Amogus",
+    "text": "It's fantastic to speak with people who have similar views :D"
+  }
+]

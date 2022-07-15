@@ -12,6 +12,10 @@ class TextBox {
     this.text_index = 0;
   }
 
+  get showing() {
+    return !!this.name;
+  }
+
   preload() {
     this.assets.ui = loadImage('assets/speech-ui.png');
   }
@@ -36,6 +40,10 @@ class TextBox {
     this.text_index = 0;
   }
 
+  clear_text() {
+    this.name = null;
+  }
+
   _mouse_in_text_area() {
     const [x, y, w, h] = TextBox.TEXT_RECT;
     if (mouseX < x) return false;
@@ -48,7 +56,11 @@ class TextBox {
   handle_click() {
     // If click in the text rect, skip to end of text
     if (this.name && this._mouse_in_text_area()) {
-      this.text_index = this.text.length;
+      if (this.text_index >= this.text.length) {
+        this.clear_text();
+      } else {
+        this.text_index = this.text.length;
+      }
     }
   }
 }
