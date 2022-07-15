@@ -5,7 +5,7 @@ const text_ui = new TextBox();
 function rollDice() {
   dice_arr = [dice_1, dice_2, dice_3, dice_4, dice_5, dice_6];
   for (let i = 0; i < random(1, 6); i++) {
-    image(dice_arr[i], 650, 80, 100, 100)
+    image(dice_arr[i], 650, 80, 100, 100);
   }
 }
 
