@@ -9,8 +9,8 @@ function rollDice() {
   }
 }
 
-// P5 FUNCTIONS
 function preload() {
+  backgroundImg = loadImage('assets/school.png');
   dice_1 = loadImage('assets/dice_1.png');
   dice_2 = loadImage('assets/dice_2.png');
   dice_3 = loadImage('assets/dice_3.png');
@@ -30,7 +30,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(backgroundImg);
   text_ui.show();
   image(dice_1, 650, 80, 100, 100);
 }
