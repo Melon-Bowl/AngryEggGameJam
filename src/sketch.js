@@ -13,15 +13,14 @@ function rollDice() {
   }
 }
 
-// P5 FUNCTIONS
 function preload() {
+  backgroundImg = loadImage('assets/school.png');
   dice_1 = loadImage('assets/dice/1.png');
   dice_2 = loadImage('assets/dice/2.png');
   dice_3 = loadImage('assets/dice/3.png');
   dice_4 = loadImage('assets/dice/4.png');
   dice_5 = loadImage('assets/dice/5.png');
   dice_6 = loadImage('assets/dice/6.png');
-
   text_ui.preload();
   characters.forEach(c => c.preload());
   chapters.forEach(c => c.preload());
@@ -37,6 +36,7 @@ function setup() {
 }
 
 function draw() {
-  background(220);
+  background(backgroundImg);
   chapters[current_chapter].show();
+  image(dice_1, 650, 80, 100, 100);
 }
