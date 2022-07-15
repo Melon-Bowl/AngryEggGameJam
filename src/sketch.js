@@ -5,18 +5,18 @@ const text_ui = new TextBox();
 function rollDice() {
   dice_arr = [dice_1, dice_2, dice_3, dice_4, dice_5, dice_6];
   for (let i = 0; i < random(1, 6); i++) {
-    image(dice_arr[i], 650, 80, 100, 100)
+    image(dice_arr[i], 650, 80, 100, 100);
   }
 }
 
 // P5 FUNCTIONS
 function preload() {
-  dice_1 = loadImage('assets/dice_1.png');
-  dice_2 = loadImage('assets/dice_2.png');
-  dice_3 = loadImage('assets/dice_3.png');
-  dice_4 = loadImage('assets/dice_4.png');
-  dice_5 = loadImage('assets/dice_5.png');
-  dice_6 = loadImage('assets/dice_6.png');
+  dice_1 = loadImage('assets/dice/1.png');
+  dice_2 = loadImage('assets/dice/2.png');
+  dice_3 = loadImage('assets/dice/3.png');
+  dice_4 = loadImage('assets/dice/4.png');
+  dice_5 = loadImage('assets/dice/5.png');
+  dice_6 = loadImage('assets/dice/6.png');
   text_ui.preload();
 }
 
