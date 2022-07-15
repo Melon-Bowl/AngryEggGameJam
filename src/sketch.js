@@ -17,6 +17,7 @@ function preload() {
   dice_4 = loadImage('assets/dice/4.png');
   dice_5 = loadImage('assets/dice/5.png');
   dice_6 = loadImage('assets/dice/6.png');
+  gryphon = loadImage('assets/gryphon.png')
   text_ui.preload();
 }
 
