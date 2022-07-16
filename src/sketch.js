@@ -2,7 +2,7 @@ const text_ui = new TextBox();
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
-    angry: 'assets/characters/chad.png'
+    angry: 'assets/characters/amogus-angry.png'
   }),
   new Character('Gryphon', { neutral: 'assets/characters/gryphon.png' })
 ];
