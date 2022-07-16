@@ -28,6 +28,7 @@ class TextBox {
     image(this.assets.ui, 0, 0, width, height);
 
     if (this.name) {
+      fill(255);
       textSize(22);
       textAlign(CENTER, CENTER);
       text(this.name, ...TextBox.NAME_RECT);

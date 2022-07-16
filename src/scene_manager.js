@@ -3,7 +3,7 @@ class SceneManager {
   static DEFAULT_FADE_SPEED = 1;
 
   constructor({ text_ui, characters, backgrounds }) {
-    this.menu = new MenuManager();
+    this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
       new Chapter({
@@ -39,7 +39,12 @@ class SceneManager {
     if (this.fade_progress > 255 || this.fade_progress < 0) {
       this.fade_mode = null;
       if (this.end_fade_callback) this.end_fade_callback();
+      return true;
     }
+  }
+
+  handle_click() {
+    if (this.state === 'menu') this.menu.handle_click();
   }
 
   preload() {
@@ -47,8 +52,11 @@ class SceneManager {
   }
 
   async setup() {
-    // this.state = 'menu';
+    this.state = 'menu';
+    await this.menu.wait_for_play();
+    await this.fade('out', 5);
     this.state = 'title';
+    await this.fade('in', 3);
     await timeout(SceneManager.CHAPTER_TITLE_DURATION);
     await this.fade('out', 4);
     this.state = 'in-scene';
@@ -63,8 +71,8 @@ class SceneManager {
     push();
     background(0);
     textAlign(CENTER, CENTER);
-    stroke(255, this.fade_progress);
-    fill(255, this.fade_progress);
+    strokeWeight(0);
+    fill(255, this.is_fading ? this.fade_progress : 255);
     textSize(80);
     const chapter_name = `Chapter ${this.current_chapter + 1}`;
     text(chapter_name, width / 2, height / 2);
@@ -73,14 +81,15 @@ class SceneManager {
 
   show() {
     if (this.is_fading) {
+      const opacity = this.fade_progress;
+      if (this.update_fade()) return;
       background(0);
-      tint(255, this.fade_progress);
-      this.update_fade();
+      tint(255, opacity);
     }
 
     switch (this.state) {
-      // case 'menu':
-      //   return this.menu.show();
+      case 'menu':
+        return this.menu.show(this.is_fading ? this.fade_progress : 255);
       case 'title':
         return this.show_chapter_title();
       case 'in-scene':

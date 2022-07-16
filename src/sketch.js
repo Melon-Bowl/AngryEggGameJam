@@ -34,6 +34,7 @@ function preload() {
 }
 
 function mouseClicked() {
+  scene_man.handle_click();
   text_ui.handle_click();
 }
 
@@ -43,6 +44,7 @@ function setup() {
 }
 
 function draw() {
+  cursor();
   scene_man.show();
   die.show();
 }
