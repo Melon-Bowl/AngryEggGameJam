@@ -6,10 +6,11 @@ class Chapter {
     [480, 130, 350, 400]
   ];
 
-  constructor({ file, text_ui, characters }) {
+  constructor({ file, text_ui, characters, backgrounds }) {
     this.file = file;
     this.text_ui = text_ui;
     this.characters = characters;
+    this.backgrounds = backgrounds;
 
     if (!file) throw new Error('Chapter must have story file');
 
@@ -19,7 +20,11 @@ class Chapter {
   }
 
   preload() {
-    this.data = loadJSON(this.file);
+    const obj = loadJSON(this.file);
+    setTimeout(() => {
+      this.background = obj.background;
+      this.data = obj.actions;
+    }, 50);
   }
 
   execute_action(action) {
@@ -73,6 +78,8 @@ class Chapter {
   }
 
   show() {
+    background(this.backgrounds[this.background]);
+
     // If speech has ended, move to next action
     if (this.should_progress()) {
       this.execute_action(this.data[++this.current_action]);
