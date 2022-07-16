@@ -17,62 +17,212 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "Hello, how are you doing?"
+      "text": "Hey Gryphon how are you doing? UwU"
     },
     {
       "type": "speech",
       "target": "Gryphon",
-      "text": "Incredible, anyway as I was saying..."
-    },
-    {
-      "type": "texture",
-      "target": "Lucy",
-      "texture": "angry"
+      "text": "Incredible"
     },
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "That's great! I also believe that we must raise taxes on single mothers. Particularly the struggling kind, haha!"
-    },
-    {
-      "type": "texture",
-      "target": "Lucy",
-      "texture": "neutral"
-    },
-    {
-      "type": "speech",
-      "target": "Lucy",
-      "text": "It's fantastic to speak with people who have similar views :D"
-    },
-    {
-      "type": "texture",
-      "target": "Gryphon",
-      "texture": "angry"
+      "text": "That's great! I was wondering if you were free after school toda..."
     },
     {
       "type": "speech",
       "target": "Gryphon",
-      "text": "Hey Lucy you interrupted me you insolent fool I will smite you down with the ultimate impostor technique so fear for your life!"
+      "text": "Its absolutely incredible that I just found out that bugs can actually fart! They can let out methane and hydrogen in the form of a fart, so a bug can have the nastiest and absolutely horribly stanky fart and we will never know because they are released in such small amounts!"
     },
     {
-      "type": "texture",
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Bruh."
+    },
+    {
+      "type": "speech",
       "target": "Gryphon",
-      "texture": "neutral"
+      "text": "Sorry what were you saying Lucy? I was just so engrossed in reading Bug Facts from Facts.net that I didn't catch what you were saying."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Its ok Gryphon I'm used to it now, nevermind what I was saying look there are two weird.. people? They seem to be approaching us ゴゴゴゴ"
     },
     {
       "type": "sub",
+      "target": "Chad",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "ゴ ゴ ゴ ゴ"
+    },
+    {
+      "type": "texture",
+      "target": "Lucy",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Who do you think you are pushing Gryphon out of the frame like that HUH ??!!"
+    },
+    {
+      "type": "speech",
       "target": "Gryphon",
+      "text": "Hey Lucy did you know that there are 10 quintillion insects in the world !?!?!11?!!?"
+    },
+    {
+      "type": "texture",
+      "target": "Lucy",
+      "texture": "neutral"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Bruh."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "I'm  C h a d  from class 2-C. I'm here to do... Chad business 😎"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Yes I know who you are Chad, we've been going to the same school for over a year now. Why are you here?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "C h a d  😎 is here to do business."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Must be a pretty desperate situation for them to have sent you to work with me, Gryphon and him. Anyway who's that sussy looking guy next to you?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "I don't know he just turned up and said he was just at the med center and now his teacher told him to come help us out."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Help out?? What's even going on?"
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
       "position": 0
     },
     {
       "type": "speech",
+      "target": "Amogus",
+      "text": "Allow me to introduce myslef :)"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "My name is Amogus, I am from class 2-A and I have been sent here to inform you guys that us 5 have been asked to investigate a serious that the school is currently facing."
+    },
+    {
+      "type": "sub",
       "target": "Gryphon",
-      "text": "obama"
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Wait. Us  f i v e ? Who's the fifth?"
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "You've literally been looking at them dead in the eye for the past 20 dialogue prompts and now you have the guts to pretend you have no clue who Amogus is talking about."
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Nay, I have absolutely zero clue. *stare*"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Anyway, so what's this urgent situation you've been telling us about Amogus?"
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "to be honest' im not even quite sure myslef. I was told to assembel and come with you four to the teachers room and they will give us all the instructions there :/"
+    },
+    {
+      "type": "sub",
+      "target": "Chad",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Ok I pull up 🚗 😎"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Gosh, dealing with you three is going to be such a pain I can already feel it."
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Let's go Gryphon. And you, don't fall behind. I don't know how you got here but you better not get in our way."
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Yes Lucy, I'm coming !!"
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "It seems Lucy doesn't trust me yet..."
     },
     {
       "type": "sub",
       "target": null,
       "position": 0
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "I should hurry and catch up to them..."
     }
   ]
 }

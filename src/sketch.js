@@ -25,6 +25,9 @@ const characters = [
   new Character('Lucy', { 
     neutral: 'assets/characters/lucy.png',
     angry: 'assets/characters/lucy_angry.png' 
+  }),
+  new Character('Chad', { 
+    neutral: 'assets/characters/chad.png',
   })
 ];
 
