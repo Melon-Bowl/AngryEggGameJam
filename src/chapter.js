@@ -43,25 +43,43 @@ class Chapter {
   execute_action(action) {
     switch (action.type) {
       case 'speech':
-        this.text_ui.show_text(action.target, action.text);
-        this.boomer.boom(Chapter.CHARACTER_POSITIONS[0]);
-        return;
+        return this.text_ui.show_text(action.target, action.text);
       case 'sub':
-        this.substitute_character(action);
-        return;
+        return this.substitute_character(action);
       case 'texture':
         const character = this.characters.find(c => c.name === action.target);
-        character.set_texture(action.texture);
-        return;
+        return character.set_texture(action.texture);
       case 'play_sound':
-        this.music.play_track('chapter_1');
-        return;
+        return this.music.play_track('chapter_1');
+      case 'boom':
+        return this.boom(action.position);
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);
     }
   }
 
-  async substitute_character({ target, position }) {
+  async boom(position) {
+    const small_chars = [];
+    const prev_textures = [];
+
+    this.positions.forEach((name, i) => {
+      if (!name || i === position) return;
+      const char = this.characters.find(c => c.name === name);
+      if (char.has_texture('small')) {
+        small_chars.push(char);
+        prev_textures.push(char.current_texture);
+        char.set_texture('small');
+      }
+    });
+
+    const explosion = this.boomer.boom(Chapter.CHARACTER_POSITIONS[position]);
+    await this.substitute_character({ target: null, position, quick: true });
+    await explosion;
+
+    small_chars.forEach((c, i) => c.set_texture(prev_textures[i]));
+  }
+
+  async substitute_character({ target, position, quick }) {
     this.substituting_characters = true;
     const enter_char = target && this.characters.find(c => c.name === target);
     const exit_char =
@@ -72,12 +90,12 @@ class Chapter {
     if (exit_char) {
       await exit_char.transition('out');
       this.positions[position] = null;
-      await timeout(Character.TRANSITION_GAP);
+      await timeout(quick ? 15 : Character.TRANSITION_GAP);
     }
     if (current_pos >= 0) {
       await enter_char.transition('out');
       this.positions[current_pos] = null;
-      await timeout(Character.TRANSITION_GAP);
+      await timeout(quick ? 15 : Character.TRANSITION_GAP);
     }
     if (enter_char) {
       this.positions[position] = target;

@@ -28,6 +28,10 @@ class Character {
     this.current_texture = texture;
   }
 
+  has_texture(texture) {
+    return !!this.texture_files[texture];
+  }
+
   transition(mode) {
     this.transition_mode = mode;
     this.transition_progress = mode === 'in' ? 0 : 255;
