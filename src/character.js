@@ -35,18 +35,32 @@ class Character {
     }
   }
 
+  /**
+   * Make changes to the drawing method to signify character is speaking
+   * @param p [x, y, w, h]
+   */
+  offset_for_speech(p) {
+    translate(p[0] + p[2] / 2, p[1] + p[3] / 2);
+    rotate((PI / 180) * random(-45, 45));
+    translate(-(p[0] + p[2] / 2), -(p[1] + p[3] / 2));
+
+    translate(0, random(-10, 10));
+  }
+
   preload() {
     for (const name in this.texture_files) {
       this.textures[name] = loadImage(this.texture_files[name]);
     }
   }
 
-  show(position) {
+  show(position, is_speaking) {
     const texture_img = this.textures[this.current_texture];
 
+    push();
     if (this.in_transition) tint(255, this.transition_progress);
     this.update_transition();
+    if (is_speaking) this.offset_for_speech(position);
     image(texture_img, ...position);
-    noTint();
+    pop();
   }
 }

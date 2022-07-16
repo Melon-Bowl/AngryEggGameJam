@@ -74,9 +74,13 @@ class Chapter {
       this.execute_action(this.data[++this.current_action]);
     }
 
+    const current_speaker = this.text_ui.name;
+
     this.characters.forEach(c => {
       const pos = this.positions.indexOf(c.name);
-      if (pos >= 0) c.show(Chapter.CHARACTER_POSITIONS[pos]);
+      if (pos >= 0) {
+        c.show(Chapter.CHARACTER_POSITIONS[pos], c.name === current_speaker);
+      }
     });
     this.text_ui.show();
   }
