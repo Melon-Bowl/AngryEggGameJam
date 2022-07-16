@@ -4,6 +4,7 @@ const background_files = ['school.png'];
 const backgrounds = {};
 
 const music = new Tracks();
+const boomer = new BoomController({ music });
 
 const characters = [
   new Character('Amogus', {
@@ -23,7 +24,13 @@ const characters = [
   })
 ];
 
-const scene_man = new SceneManager({ text_ui, characters, backgrounds, music });
+const scene_man = new SceneManager({
+  text_ui,
+  characters,
+  backgrounds,
+  music,
+  boomer
+});
 
 const die = new DieController();
 
@@ -37,6 +44,7 @@ function preload() {
   music.preload();
   characters.forEach(c => c.preload());
   scene_man.preload();
+  boomer.preload();
 }
 
 function mouseClicked() {
@@ -45,7 +53,8 @@ function mouseClicked() {
 }
 
 function setup() {
-  createCanvas(800, 600);
+  const cnv = createCanvas(800, 600);
+  boomer.set_canvas(cnv);
   scene_man.setup();
 }
 
