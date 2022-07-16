@@ -11,7 +11,7 @@ class SceneManager {
         characters,
         backgrounds,
         music,
-        scenes: ['src/scenes/1-1.json']
+        scenes: ['src/scenes/1-1.json', 'src/scenes/1-2.json']
       })
     ];
     this.current_chapter = 0;
@@ -56,16 +56,23 @@ class SceneManager {
     this.state = 'menu';
     await this.menu.wait_for_play();
     await this.fade('out', 5);
-    this.state = 'title';
-    await this.fade('in', 3);
-    await timeout(SceneManager.CHAPTER_TITLE_DURATION);
-    await this.fade('out', 4);
-    this.state = 'in-scene';
-    const scene = this.chapters[0].start_next_scene();
-    await this.fade('in');
-    this.chapters[0].allowed_to_progress = true;
-    await scene;
-    await this.fade('out', 4);
+
+    for (const chapter of this.chapters) {
+      this.state = 'title';
+      await this.fade('in', 3);
+      await timeout(SceneManager.CHAPTER_TITLE_DURATION);
+      await this.fade('out', 4);
+      this.state = 'in-scene';
+      for (let i = 0; i < chapter.scenes.length; i++) {
+        const scene = chapter.start_next_scene();
+        await this.fade('in');
+        chapter.allowed_to_progress = true;
+        await scene;
+        chapter.allowed_to_progress = false;
+        await this.fade('out', 4);
+      }
+      this.state = 'end';
+    }
   }
 
   show_chapter_title() {
@@ -80,6 +87,20 @@ class SceneManager {
     pop();
   }
 
+  show_end() {
+    push();
+    background(0);
+    textAlign(CENTER, CENTER);
+    strokeWeight(0);
+    fill(255, this.is_fading ? this.fade_progress : 255);
+    textSize(80);
+    text('The End', width / 2, height * 0.45);
+
+    textSize(20);
+    text('Refresh to play again...', width / 2, height * 0.6);
+    pop();
+  }
+
   show() {
     if (this.is_fading) {
       const opacity = this.fade_progress;
@@ -91,6 +112,8 @@ class SceneManager {
     switch (this.state) {
       case 'menu':
         return this.menu.show(this.is_fading ? this.fade_progress : 255);
+      case 'end':
+        return this.show_end();
       case 'title':
         return this.show_chapter_title();
       case 'in-scene':

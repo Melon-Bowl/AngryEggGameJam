@@ -1,0 +1,15 @@
+{
+  "background": "school.png",
+  "actions": [
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "This is a second scene"
+    }
+  ]
+}

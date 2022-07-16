@@ -68,11 +68,6 @@
       "type": "speech",
       "target": "Gryphon",
       "text": "obama"
-    },
-    {
-      "type": "sub",
-      "target": null,
-      "position": 0
     }
   ]
 }

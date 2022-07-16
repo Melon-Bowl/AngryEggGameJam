@@ -36,6 +36,8 @@ class Chapter {
     const scene = this.scenes[++this.current_scene];
     this.background = scene.background;
     this.data = scene.actions;
+    this.current_action = -1;
+    this.positions = [null, null, null];
     return new Promise(resolve => (this.end_scene = resolve));
   }
 
@@ -96,12 +98,6 @@ class Chapter {
   show() {
     background(this.backgrounds[this.background]);
 
-    if (!this.data[this.current_action + 1]) return this.end_scene();
-
-    if (this.should_progress()) {
-      this.execute_action(this.data[++this.current_action]);
-    }
-
     const current_speaker = this.text_ui.speaking && this.text_ui.name;
 
     this.characters.forEach(c => {
@@ -111,5 +107,11 @@ class Chapter {
       }
     });
     this.text_ui.show();
+
+    if (this.should_progress()) {
+      this.current_action++;
+      if (!this.data[this.current_action]) return this.end_scene();
+      this.execute_action(this.data[this.current_action]);
+    }
   }
 }
