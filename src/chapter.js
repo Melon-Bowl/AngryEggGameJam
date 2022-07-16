@@ -6,25 +6,36 @@ class Chapter {
     [480, 130, 300, 550]
   ];
 
-  constructor({ file, text_ui, characters, backgrounds }) {
-    this.file = file;
+  constructor({ scenes, text_ui, characters, backgrounds }) {
+    this.scene_files = scenes;
     this.text_ui = text_ui;
     this.characters = characters;
     this.backgrounds = backgrounds;
 
-    if (!file) throw new Error('Chapter must have story file');
+    if (!scenes || !scenes.length)
+      throw new Error('Chapter must have story file');
+
+    this.current_scene = -1;
+    this.data = null;
+    this.background = null;
 
     this.current_action = -1;
     this.positions = [null, null, null];
     this.substituting_characters = false;
+
+    this.allowed_to_progress = false;
+    this.end_scene = null;
   }
 
   preload() {
-    const obj = loadJSON(this.file);
-    setTimeout(() => {
-      this.background = obj.background;
-      this.data = obj.actions;
-    }, 50);
+    this.scenes = this.scene_files.map(s => loadJSON(s));
+  }
+
+  start_next_scene() {
+    const scene = this.scenes[++this.current_scene];
+    this.background = scene.background;
+    this.data = scene.actions;
+    return new Promise(resolve => (this.end_scene = resolve));
   }
 
   execute_action(action) {
@@ -71,16 +82,18 @@ class Chapter {
 
   should_progress() {
     return (
-      this.data[this.current_action + 1] &&
+      //this.data[this.current_action + 1] &&
       !this.text_ui.showing &&
-      !this.substituting_characters
+      !this.substituting_characters &&
+      this.allowed_to_progress
     );
   }
 
   show() {
     background(this.backgrounds[this.background]);
 
-    // If speech has ended, move to next action
+    if (!this.data[this.current_action + 1]) return this.end_scene();
+
     if (this.should_progress()) {
       this.execute_action(this.data[++this.current_action]);
     }

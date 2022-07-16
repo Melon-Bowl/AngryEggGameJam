@@ -1,0 +1,5 @@
+class MenuManager {
+  constructor() {}
+
+  show() {}
+}

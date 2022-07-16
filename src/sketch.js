@@ -8,20 +8,17 @@ const characters = [
     neutral: 'assets/characters/amogus.png',
     angry: 'assets/characters/amogus_angry.png'
   }),
-  new Character('Gryphon', { 
+  new Character('Gryphon', {
     neutral: 'assets/characters/gryphon.png',
-    angry: 'assets/characters/gryphon_angry.png' 
+    angry: 'assets/characters/gryphon_angry.png'
   }),
-  new Character('Lucy', { 
+  new Character('Lucy', {
     neutral: 'assets/characters/lucy.png',
-    angry: 'assets/characters/lucy_angry.png' 
+    angry: 'assets/characters/lucy_angry.png'
   })
 ];
 
-const chapters = [
-  new Chapter({ text_ui, characters, backgrounds, file: 'src/chapters/1.json' })
-];
-let current_chapter = 0;
+const scene_man = new SceneManager({ text_ui, characters, backgrounds });
 
 const die = new DieController();
 
@@ -33,7 +30,7 @@ function preload() {
   die.preload();
   text_ui.preload();
   characters.forEach(c => c.preload());
-  chapters.forEach(c => c.preload());
+  scene_man.preload();
 }
 
 function mouseClicked() {
@@ -42,9 +39,10 @@ function mouseClicked() {
 
 function setup() {
   createCanvas(800, 600);
+  scene_man.setup();
 }
 
 function draw() {
-  chapters[current_chapter].show();
+  scene_man.show();
   die.show();
 }
