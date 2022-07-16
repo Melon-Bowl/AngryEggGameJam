@@ -30,6 +30,10 @@ class Chapter {
       case 'sub':
         this.substitute_character(action);
         return;
+      case 'texture':
+        const character = this.characters.find(c => c.name === action.target);
+        character.set_texture(action.texture);
+        return;
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);
     }

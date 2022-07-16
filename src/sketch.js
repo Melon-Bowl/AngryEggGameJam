@@ -1,6 +1,9 @@
 const text_ui = new TextBox();
 const characters = [
-  new Character('Amogus', { neutral: 'assets/characters/amogus.png' }),
+  new Character('Amogus', {
+    neutral: 'assets/characters/amogus.png',
+    angry: 'assets/characters/chad.png'
+  }),
   new Character('Gryphon', { neutral: 'assets/characters/gryphon.png' })
 ];
 const chapters = [

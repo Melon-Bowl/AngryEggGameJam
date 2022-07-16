@@ -20,9 +20,19 @@
     "text": "Incredible, anyway as I was saying..."
   },
   {
+    "type": "texture",
+    "target": "Amogus",
+    "texture": "angry"
+  },
+  {
     "type": "speech",
     "target": "Amogus",
     "text": "That's great! I also believe that we must raise taxes on single mothers. Particularly the struggling kind, haha!"
+  },
+  {
+    "type": "texture",
+    "target": "Amogus",
+    "texture": "neutral"
   },
   {
     "type": "speech",
@@ -38,5 +48,10 @@
     "type": "speech",
     "target": "Gryphon",
     "text": "obama"
+  },
+  {
+    "type": "sub",
+    "target": null,
+    "position": 0
   }
 ]

@@ -20,6 +20,14 @@ class Character {
     return !!this.transition_mode;
   }
 
+  set_texture(texture) {
+    if (!this.texture_files[texture])
+      throw new Error(
+        `Invalid texture '${texture}' for character '${this.name}'`
+      );
+    this.current_texture = texture;
+  }
+
   transition(mode) {
     this.transition_mode = mode;
     this.transition_progress = mode === 'in' ? 0 : 255;
@@ -43,8 +51,7 @@ class Character {
     translate(p[0] + p[2] / 2, p[1] + p[3] / 2);
     rotate((PI / 180) * random(-45, 45));
     translate(-(p[0] + p[2] / 2), -(p[1] + p[3] / 2));
-
-    translate(0, random(-10, 10));
+    translate(0, random(-20, 20));
   }
 
   preload() {
