@@ -3,15 +3,7 @@ const text_ui = new TextBox();
 const background_files = ['school.png'];
 const backgrounds = {};
 
-const audio_files = [
-  'chapter_1.mp3',
-  'main_theme.mp3',
-  'boom_theme.mp3',
-  'good_ending.mp3',
-  'bad_ending.mp3',
-  'secret_ending2.mp3'
-];
-const music = new Tracks(audio_files);
+const music = new Tracks();
 
 const characters = [
   new Character('Amogus', {
@@ -24,10 +16,10 @@ const characters = [
   }),
   new Character('Lucy', {
     neutral: 'assets/characters/lucy.png',
-    angry: 'assets/characters/lucy_angry.png' 
+    angry: 'assets/characters/lucy_angry.png'
   }),
-  new Character('Chad', { 
-    neutral: 'assets/characters/chad.png',
+  new Character('Chad', {
+    neutral: 'assets/characters/chad.png'
   })
 ];
 

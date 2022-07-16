@@ -1,0 +1,5 @@
+class BoomController {
+  constructor() {}
+
+  preload() {}
+}

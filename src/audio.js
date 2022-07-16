@@ -2,8 +2,15 @@
 // Make it so that when it is instantiated in sketch it loads all the tracks
 
 class Tracks {
-  constructor(files) {
-    this.tracks = files;
+  constructor() {
+    this.tracks = [
+      'chapter_1.mp3',
+      'main_theme.mp3',
+      'boom_theme.mp3',
+      'good_ending.mp3',
+      'bad_ending.mp3',
+      'secret_ending2.mp3'
+    ];
     this.path = 'assets/music/';
     this.audio_tracks = [];
     this.local_sound;
