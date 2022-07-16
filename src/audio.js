@@ -1,8 +1,19 @@
 class Tracks {
-  constructor(files) {
-    this.tracks = files;
-    this.path = 'assets/music/';
+  constructor() {
+    this.tracks = [
+      'chapter_1.mp3',
+      'main_theme.mp3',
+      'boom_theme.mp3',
+      'good_ending.mp3',
+      'bad_ending.mp3',
+      'secret_ending2.mp3'
+    ];
     this.audio_tracks = [];
+
+    this.sound_names = ['boom4.wav'];
+    this.sounds = [];
+
+    this.path = 'assets/music/';
     this.local_sound;
     this.trackPlaying = false;
     this.song_to_play = null;
@@ -14,6 +25,9 @@ class Tracks {
       this.local_sound = loadSound(this.path + this.tracks[name]);
       this.audio_tracks.push(this.local_sound);
     }
+
+    soundFormats('wav');
+    this.sounds = this.sound_names.map(sfx => loadSound(`assets/sfx/${sfx}`));
   }
 
   play_track(song) {
@@ -30,5 +44,11 @@ class Tracks {
       this.song_to_play.play();
     }
     this.trackPlaying = true;
+  }
+
+  play_sound(sfx) {
+    const path = `assets/sfx/${sfx}`;
+    const sound = this.sounds.find(t => t.url === path);
+    sound.play();
   }
 }

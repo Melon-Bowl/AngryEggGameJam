@@ -5,12 +5,12 @@ class Button {
     this.onclick = onclick || (() => 0);
   }
 
-  show(opacity) {
+  show(opacity = 255) {
     if (this.contains_mouse()) cursor('pointer');
 
     strokeWeight(3);
     const button_opacity =
-      (((opacity / 255) * (this.contains_mouse() ? 255 : 235)) / 255) * 255;
+      (opacity * (this.contains_mouse() ? 255 : 235)) / 255;
     fill(255, button_opacity);
     stroke(0, opacity);
     rect(...this.rect);
@@ -19,7 +19,6 @@ class Button {
     stroke(0, opacity);
     strokeWeight(2);
     fill(0, opacity);
-    textSize(40);
     text(this.text, ...this.rect);
   }
 
@@ -71,6 +70,7 @@ class MenuManager {
     text('Our Game', width / 2, height * 0.3);
 
     // Buttons
+    textSize(40);
     this.buttons.forEach(b => b.show(opacity));
   }
 }

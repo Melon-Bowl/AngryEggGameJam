@@ -2,7 +2,7 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds, music }) {
+  constructor({ text_ui, characters, backgrounds, music, boomer }) {
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
@@ -22,6 +22,12 @@ class SceneManager {
     this.fade_speed = 1;
     this.fade_progress = null;
     this.end_fade_callback = null;
+
+    this.end_button = new Button(
+      'Play Again',
+      [250, 600 * 0.55 - 30, 300, 60],
+      () => window.location.reload()
+    );
   }
 
   get is_fading() {
@@ -45,7 +51,14 @@ class SceneManager {
   }
 
   handle_click() {
-    if (this.state === 'menu') this.menu.handle_click();
+    switch (this.state) {
+      case 'menu':
+        return this.menu.handle_click();
+      case 'end':
+        return this.end_button.handle_click();
+      default:
+        return;
+    }
   }
 
   preload() {
@@ -94,10 +107,11 @@ class SceneManager {
     strokeWeight(0);
     fill(255, this.is_fading ? this.fade_progress : 255);
     textSize(80);
-    text('The End', width / 2, height * 0.45);
+    text('The End', width / 2, height * 0.4);
 
-    textSize(20);
-    text('Refresh to play again...', width / 2, height * 0.6);
+    textSize(30);
+    this.end_button.show();
+
     pop();
   }
 

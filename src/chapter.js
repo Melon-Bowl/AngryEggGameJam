@@ -1,17 +1,16 @@
-const timeout = time => new Promise(resolve => setTimeout(resolve, time));
-
 class Chapter {
   static CHARACTER_POSITIONS = [
     [30, 130, 300, 550],
     [480, 130, 300, 550]
   ];
 
-  constructor({ scenes, text_ui, music, characters, backgrounds }) {
+  constructor({ scenes, text_ui, music, characters, backgrounds, boomer }) {
     this.scene_files = scenes;
     this.text_ui = text_ui;
     this.characters = characters;
     this.backgrounds = backgrounds;
     this.music = music;
+    this.boomer = boomer;
 
     if (!scenes || !scenes.length)
       throw new Error('Chapter must have story file');
@@ -45,6 +44,7 @@ class Chapter {
     switch (action.type) {
       case 'speech':
         this.text_ui.show_text(action.target, action.text);
+        this.boomer.boom(Chapter.CHARACTER_POSITIONS[0]);
         return;
       case 'sub':
         this.substitute_character(action);
