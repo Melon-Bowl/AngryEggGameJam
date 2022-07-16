@@ -3,6 +3,16 @@ const text_ui = new TextBox();
 const background_files = ['school.png'];
 const backgrounds = {};
 
+const audio_files = [
+  'chapter_1.mp3',
+  'main_theme.mp3',
+  'boom_theme.mp3',
+  'good_ending.mp3',
+  'bad_ending.mp3',
+  'secret_ending2.mp3'
+]
+const music = new Tracks(audio_files);
+
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
@@ -19,7 +29,7 @@ const characters = [
 ];
 
 const chapters = [
-  new Chapter({ text_ui, characters, backgrounds, file: 'src/chapters/1.json' })
+  new Chapter({ text_ui, music, characters, backgrounds, file: 'src/chapters/1.json' })
 ];
 let current_chapter = 0;
 
@@ -32,6 +42,7 @@ function preload() {
 
   die.preload();
   text_ui.preload();
+  music.preload();
   characters.forEach(c => c.preload());
   chapters.forEach(c => c.preload());
 }

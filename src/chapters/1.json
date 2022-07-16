@@ -2,6 +2,9 @@
   "background": "school.png",
   "actions": [
     {
+      "type": "play_sound"
+    },
+    {
       "type": "sub",
       "target": "Lucy",
       "position": 0
