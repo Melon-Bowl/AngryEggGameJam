@@ -11,6 +11,10 @@ const characters = [
   new Character('Gryphon', { 
     neutral: 'assets/characters/gryphon.png',
     angry: 'assets/characters/gryphon_angry.png' 
+  }),
+  new Character('Lucy', { 
+    neutral: 'assets/characters/lucy.png',
+    angry: 'assets/characters/lucy_angry.png' 
   })
 ];
 

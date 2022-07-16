@@ -2,7 +2,7 @@ const timeout = time => new Promise(resolve => setTimeout(resolve, time));
 
 class Chapter {
   static CHARACTER_POSITIONS = [
-    [30, 130, 350, 400],
+    [30, 130, 300, 550],
     [480, 130, 300, 550]
   ];
 

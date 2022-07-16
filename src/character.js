@@ -49,9 +49,9 @@ class Character {
    */
   offset_for_speech(p) {
     translate(p[0] + p[2] / 2, p[1] + p[3] / 2);
-    rotate((PI / 180) * random(-45, 45));
+    rotate((PI / 180) * random(-20, 20));
     translate(-(p[0] + p[2] / 2), -(p[1] + p[3] / 2));
-    translate(0, random(-20, 20));
+    translate(0, random(-10, 10));
   }
 
   preload() {
