@@ -6,11 +6,12 @@ class Chapter {
     [480, 130, 300, 550]
   ];
 
-  constructor({ scenes, text_ui, characters, backgrounds }) {
+  constructor({ scenes, text_ui, music, characters, backgrounds }) {
     this.scene_files = scenes;
     this.text_ui = text_ui;
     this.characters = characters;
     this.backgrounds = backgrounds;
+    this.music = music;
 
     if (!scenes || !scenes.length)
       throw new Error('Chapter must have story file');
@@ -49,6 +50,9 @@ class Chapter {
       case 'texture':
         const character = this.characters.find(c => c.name === action.target);
         character.set_texture(action.texture);
+        return;
+      case 'play_sound':
+        this.music.play_track('chapter_1');
         return;
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);

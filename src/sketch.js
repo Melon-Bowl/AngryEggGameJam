@@ -3,6 +3,16 @@ const text_ui = new TextBox();
 const background_files = ['school.png'];
 const backgrounds = {};
 
+const audio_files = [
+  'chapter_1.mp3',
+  'main_theme.mp3',
+  'boom_theme.mp3',
+  'good_ending.mp3',
+  'bad_ending.mp3',
+  'secret_ending2.mp3'
+];
+const music = new Tracks(audio_files);
+
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
@@ -18,7 +28,7 @@ const characters = [
   })
 ];
 
-const scene_man = new SceneManager({ text_ui, characters, backgrounds });
+const scene_man = new SceneManager({ text_ui, characters, backgrounds, music });
 
 const die = new DieController();
 
@@ -29,6 +39,7 @@ function preload() {
 
   die.preload();
   text_ui.preload();
+  music.preload();
   characters.forEach(c => c.preload());
   scene_man.preload();
 }

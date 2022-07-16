@@ -2,7 +2,7 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds }) {
+  constructor({ text_ui, characters, backgrounds, music }) {
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
@@ -10,6 +10,7 @@ class SceneManager {
         text_ui,
         characters,
         backgrounds,
+        music,
         scenes: ['src/scenes/1-1.json']
       })
     ];
