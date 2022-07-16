@@ -15,12 +15,14 @@ Additional criteria: If anyone says "roll of the dice" they blow up (with bad gr
 - This will signify to the player that this is a part of the game universe where people say "roll of the dice" and blow up randomly
 
 Different endings (decided by the roll of a die, you can chose to override the roll to get the secret endings):
-- __Bomb ending__: bomb blows up and everyone gets killed
-- __Neutral ending__: bomb gets neutralised but few classmates die along the way
-- __Good ending__: everyone is saved and you go to the local 711 to get onigiri but -the guy- has a higher chance of blowing up 
-- __Perfect ending__: if -the guy- doesn't blow up and everyone survives, you get the perfect ending where everyone is happy
+*Endings are partially based on who boomed*
+
+- __Boom ending__: Either Lucy or Gryphon boomed so they grief for each other
+- __Neutral ending__: Amongus or gigachad booms and although the friends miss their comrade, the school is safe
+- __Good ending__: The policeman off screen booms and you see a small explosion in the background. None of the characters die and the school is saved 
+- __Perfect ending__: No one booms at all and you get a message on screen that the bomb has been defused
 - __Scary ending__: (triggered by an addional random event): you get teleported to the void where the game pretends to lag and you have to restart
-- __Genocide ending__: everyone survives but the player choses to go for the bad ending and slaughter all their friends
+- __Genocide ending__: Perfect ending but there is a small chance that *you* go and blow everyone up and you a bunch of booms and all the characters die
 
 - __Secret ending__: bomb doesn't blow up but everyone finds out you're from another universe (the real world) and kill you
 - __Secret ending 2__: bomb blows up but you are lucky so you get away with your love interest and then she kills you
