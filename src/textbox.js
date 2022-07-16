@@ -29,11 +29,11 @@ class TextBox {
 
     if (this.name) {
       fill(255);
-      textSize(22);
+      textSize(28);
       textAlign(CENTER, CENTER);
       text(this.name, ...TextBox.NAME_RECT);
 
-      textSize(18);
+      textSize(22);
       textAlign(LEFT, TOP);
       text(this.text.slice(0, ++this.text_index), ...TextBox.TEXT_RECT);
     }

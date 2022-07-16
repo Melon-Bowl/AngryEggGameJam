@@ -11,7 +11,7 @@ class SceneManager {
         characters,
         backgrounds,
         music,
-        scenes: ['src/scenes/1-1.json', 'src/scenes/1-2.json']
+        scenes: ['src/scenes/1-1.json', 'src/scenes/1-2.json', 'src/scenes/1-3.json']
       })
     ];
     this.current_chapter = 0;

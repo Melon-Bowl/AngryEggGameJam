@@ -130,6 +130,36 @@
       "text": "My name is Amogus, I am from class 2-A and I have been sent here to inform you guys that us 5 have been asked to investigate a serious that the school is currently facing."
     },
     {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Wait hold the phone, how did a guy like you even get into class 1?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Me when the 🫱📞"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "What do you mean by thamt Lucy?1?!? Do you have a predjudice against' sussy folk? >:("
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "No its literally the fact that you speak with typos."
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Enough slander, back to what we were tlaking about... The teachers said us 5 have to go to their room and discuss important business"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Chad likes to talk business with teachers 😎"
+    },
+    {
       "type": "sub",
       "target": "Gryphon",
       "position": 1
@@ -206,8 +236,8 @@
     },
     {
       "type": "speech",
-      "target": "...",
-      "text": "It seems Lucy doesn't trust me yet..."
+      "target": "You",
+      "text": "..."
     },
     {
       "type": "sub",
@@ -221,8 +251,8 @@
     },
     {
       "type": "speech",
-      "target": "...",
-      "text": "I should hurry and catch up to them..."
+      "target": "You",
+      "text": "..."
     }
   ]
 }

@@ -1,6 +1,3 @@
-//TODO: Have an audio class that can load all tracks
-// Make it so that when it is instantiated in sketch it loads all the tracks
-
 class Tracks {
   constructor(files) {
     this.tracks = files;
