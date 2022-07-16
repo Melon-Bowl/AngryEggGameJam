@@ -74,7 +74,7 @@ class Chapter {
       this.execute_action(this.data[++this.current_action]);
     }
 
-    const current_speaker = this.text_ui.name;
+    const current_speaker = this.text_ui.speaking && this.text_ui.name;
 
     this.characters.forEach(c => {
       const pos = this.positions.indexOf(c.name);

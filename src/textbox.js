@@ -16,6 +16,10 @@ class TextBox {
     return !!this.name;
   }
 
+  get speaking() {
+    return this.showing && this.text_index < this.text.length;
+  }
+
   preload() {
     this.assets.ui = loadImage('assets/speech-ui.png');
   }
@@ -56,10 +60,10 @@ class TextBox {
   handle_click() {
     // If click in the text rect, skip to end of text
     if (this.name && this._mouse_in_text_area()) {
-      if (this.text_index >= this.text.length) {
-        this.clear_text();
-      } else {
+      if (this.speaking) {
         this.text_index = this.text.length;
+      } else {
+        this.clear_text();
       }
     }
   }
