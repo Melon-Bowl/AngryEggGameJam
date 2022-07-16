@@ -42,6 +42,21 @@
       "text": "It's fantastic to speak with people who have similar views :D"
     },
     {
+      "type": "texture",
+      "target": "Gryphon",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Hey among us you interrupted me you insolent fool I will smite you down with the ultimate impostor technique so fear for your life!"
+    },
+    {
+      "type": "texture",
+      "target": "Gryphon",
+      "texture": "neutral"
+    },
+    {
       "type": "sub",
       "target": "Gryphon",
       "position": 0

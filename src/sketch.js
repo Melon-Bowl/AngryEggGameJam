@@ -6,9 +6,12 @@ const backgrounds = {};
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
-    angry: 'assets/characters/amogus-angry.png'
+    angry: 'assets/characters/amogus_angry.png'
   }),
-  new Character('Gryphon', { neutral: 'assets/characters/gryphon.png' })
+  new Character('Gryphon', { 
+    neutral: 'assets/characters/gryphon.png',
+    angry: 'assets/characters/gryphon_angry.png' 
+  })
 ];
 
 const chapters = [
