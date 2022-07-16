@@ -3,7 +3,7 @@ const timeout = time => new Promise(resolve => setTimeout(resolve, time));
 class Chapter {
   static CHARACTER_POSITIONS = [
     [30, 130, 350, 400],
-    [480, 130, 350, 400]
+    [480, 130, 300, 550]
   ];
 
   constructor({ file, text_ui, characters, backgrounds }) {
