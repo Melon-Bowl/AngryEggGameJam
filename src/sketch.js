@@ -1,5 +1,8 @@
 const text_ui = new TextBox();
-const characters = [new Character('Amogus', { neutral: 'assets/amogus.png' })];
+const characters = [
+  new Character('Amogus', { neutral: 'assets/characters/amogus.png' }),
+  new Character('Gryphon', { neutral: 'assets/characters/gryphon.png' })
+];
 const chapters = [
   new Chapter({ text_ui, characters, file: 'src/chapters/1.json' })
 ];
@@ -38,5 +41,5 @@ function setup() {
 function draw() {
   background(backgroundImg);
   chapters[current_chapter].show();
-  image(dice_1, 650, 80, 100, 100);
+  image(dice_1, 720, 10, 70, 70);
 }

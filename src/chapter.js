@@ -1,3 +1,5 @@
+const timeout = time => new Promise(resolve => setTimeout(resolve, time));
+
 class Chapter {
   static CHARACTER_POSITIONS = [
     [30, 130, 350, 400],
@@ -13,6 +15,7 @@ class Chapter {
 
     this.current_action = -1;
     this.positions = [null, null, null];
+    this.substituting_characters = false;
   }
 
   preload() {
@@ -25,16 +28,49 @@ class Chapter {
         this.text_ui.show_text(action.target, action.text);
         return;
       case 'sub':
-        this.positions[action.position] = action.target || null;
+        this.substitute_character(action);
         return;
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);
     }
   }
 
+  async substitute_character({ target, position }) {
+    this.substituting_characters = true;
+    const enter_char = target && this.characters.find(c => c.name === target);
+    const exit_char =
+      this.positions[position] &&
+      this.characters.find(c => c.name === this.positions[position]);
+    const current_pos = target ? this.positions.indexOf(target) : -1;
+
+    if (exit_char) {
+      await exit_char.transition('out');
+      this.positions[position] = null;
+      await timeout(Character.TRANSITION_GAP);
+    }
+    if (current_pos >= 0) {
+      await enter_char.transition('out');
+      this.positions[current_pos] = null;
+      await timeout(Character.TRANSITION_GAP);
+    }
+    if (enter_char) {
+      this.positions[position] = target;
+      await enter_char.transition('in');
+    }
+    this.substituting_characters = false;
+  }
+
+  should_progress() {
+    return (
+      this.data[this.current_action + 1] &&
+      !this.text_ui.showing &&
+      !this.substituting_characters
+    );
+  }
+
   show() {
     // If speech has ended, move to next action
-    if (!this.text_ui.showing && this.data[this.current_action + 1]) {
+    if (this.should_progress()) {
       this.execute_action(this.data[++this.current_action]);
     }
 
