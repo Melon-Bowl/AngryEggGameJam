@@ -10,7 +10,7 @@ const audio_files = [
   'good_ending.mp3',
   'bad_ending.mp3',
   'secret_ending2.mp3'
-]
+];
 const music = new Tracks(audio_files);
 
 const characters = [
@@ -18,11 +18,11 @@ const characters = [
     neutral: 'assets/characters/amogus.png',
     angry: 'assets/characters/amogus_angry.png'
   }),
-  new Character('Gryphon', { 
+  new Character('Gryphon', {
     neutral: 'assets/characters/gryphon.png',
-    angry: 'assets/characters/gryphon_angry.png' 
+    angry: 'assets/characters/gryphon_angry.png'
   }),
-  new Character('Lucy', { 
+  new Character('Lucy', {
     neutral: 'assets/characters/lucy.png',
     angry: 'assets/characters/lucy_angry.png' 
   }),
@@ -31,10 +31,7 @@ const characters = [
   })
 ];
 
-const chapters = [
-  new Chapter({ text_ui, music, characters, backgrounds, file: 'src/chapters/1.json' })
-];
-let current_chapter = 0;
+const scene_man = new SceneManager({ text_ui, characters, backgrounds, music });
 
 const die = new DieController();
 
@@ -47,18 +44,21 @@ function preload() {
   text_ui.preload();
   music.preload();
   characters.forEach(c => c.preload());
-  chapters.forEach(c => c.preload());
+  scene_man.preload();
 }
 
 function mouseClicked() {
+  scene_man.handle_click();
   text_ui.handle_click();
 }
 
 function setup() {
   createCanvas(800, 600);
+  scene_man.setup();
 }
 
 function draw() {
-  chapters[current_chapter].show();
+  cursor();
+  scene_man.show();
   die.show();
 }
