@@ -127,7 +127,7 @@
     {
       "type": "speech",
       "target": "Amogus",
-      "text": "My name is Amogus, I am from class 2-A and I have been sent here to inform you guys that us 5 have been asked to investigate a serious that the school is currently facing."
+      "text": "My name is Amogus, I am from class 2-A and I have been sent here to infrom you guys that us 5 have been asked to investigate a seriuos that the school is currently facing."
     },
     {
       "type": "sub",
@@ -137,7 +137,7 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "Wait hold the phone, how did a guy like you even get into class 1?"
+      "text": "Wait hold the phone, how did a guy like you get put in class 1 and Gryphon and I are in class 2??"
     },
     {
       "type": "speech",
@@ -157,7 +157,7 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "No its literally the fact that you speak with typos."
+      "text": "No its literally the fact that you speak with typos..."
     },
     {
       "type": "texture",
@@ -181,7 +181,7 @@
     },
     {
       "type": "speech",
-      "target": "Lucy",
+      "target": "Gryphon",
       "text": "Wait. Us  f i v e ? Who's the fifth?"
     },
     {
@@ -192,12 +192,17 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "You've literally been looking at them dead in the eye for the past 20 dialogue prompts and now you have the guts to pretend you have no clue who Amogus is talking about."
+      "text": "They've literally just been standing here the entire time without saying anything can't blame you for not noticing them."
+    },
+    {
+      "type": "speech",
+      "target": "You",
+      "text": "...hi?"
     },
     {
       "type": "speech",
       "target": "Gryphon",
-      "text": "Nay, I have absolutely zero clue. *stare*"
+      "text": "*stare*"
     },
     {
       "type": "speech",

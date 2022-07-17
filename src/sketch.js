@@ -9,15 +9,17 @@ const boomer = new BoomController({ music });
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
-    angry: 'assets/characters/amogus_angry.png'
+    angry: 'assets/characters/amogus_angry.png',
   }),
   new Character('Gryphon', {
     neutral: 'assets/characters/gryphon.png',
-    angry: 'assets/characters/gryphon_angry.png'
+    angry: 'assets/characters/gryphon_angry.png',
+    smol: 'assets/characters/gryphon_smol.png'
   }),
   new Character('Lucy', {
     neutral: 'assets/characters/lucy.png',
-    angry: 'assets/characters/lucy_angry.png'
+    angry: 'assets/characters/lucy_angry.png',
+    smol: 'assets/characters/lucy_smol.png'
   }),
   new Character('Chad', {
     neutral: 'assets/characters/chad.png'
