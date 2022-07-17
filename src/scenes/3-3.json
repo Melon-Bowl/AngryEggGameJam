@@ -1,11 +1,161 @@
 {
-    "background": "storage.jpg",
-    "ending_name": null,
+    "background": "graveyard.jpg",
+    "ending_name": "Chad",
     "actions": [
       {
         "type": "sub",
         "target": "Gryphon",
         "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "This could have been any of you.. erm I mean us."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": ",,,"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Chad always knew what to say."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "He did, didn't he."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I will miss his generosity with brioche buns in the cafeteria."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "They never did have a three for two offer, did they?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "I will miss hum two :'("
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "We must make sure that his legacy lives on."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I hope someday I can be more like Chad."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Mee two :'<"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "You boys have a long way to go, but I believe you can do it!"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Chad wouldn't want us standing here, sulking, forever. Let's go get some brioche buns everybody."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Goodbye, Chad. You were my favourite fella here."
+      },
+      {
+        "type": "texture",
+        "target": "Gryphon",
+        "text": "angry"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Hey what's that supposed to mean?!"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Sorry, that was a bit rude of me."
+      },
+      {
+        "type": "texture",
+        "target": "Gryphon",
+        "text": "neutral"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "It's ok, I understand how you feel."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Let's go everyone..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "Somehow I feel like this could have ended differently..."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
       }
     ]
 }
