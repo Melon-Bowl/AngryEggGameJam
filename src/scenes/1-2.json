@@ -1,5 +1,5 @@
 {
-  "background": "school.png",
+  "background": "staff_room.jpg",
   "actions": [
     {
       "type": "sub",
@@ -20,6 +20,16 @@
       "type": "speech",
       "target": "Chad",
       "text": "We rolling, this is literally squad goals. Besties be bussin in the staff room sheeesh no cap fr fr 😎"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "So this is where the teachers go at breaks and stuff."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Bro we straight up in the backrooms right now."
     },
     {
       "type": "sub",
