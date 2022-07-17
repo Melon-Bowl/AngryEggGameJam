@@ -1,341 +1,340 @@
 {
-    "background": "cafeteria.jpg",
-    "actions": [
-      {
-        "type": "sub",
-        "target": "Chad",
-        "position": 0
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Let's get some bread 😎."
-      },
-      {
-        "type": "sub",
-        "target": "Lucy",
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "You dragged us to the cafeteria to get bread??"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "I always get that bread at the cafeteria, big W moment."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "Let me guess, brioche enjoyer?"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "y e s."
-      },
-      {
-        "type": "sub",
-        "target": "Amogus",
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "Amogus",
-        "text": "You must clearly be beffudled by the media Chad, everyone knows Pretzels are the bestest bread worldwide!!"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "I am not interested in debating 🗣 with someone who has clearly positioned themselves against my viewpoint and challenge me simply for the sake of arguing."
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Anyone else want brioche?"
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "I'll have a piece if you don't mind!"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "You got it brother."
-      },
-      {
-        "type": "texture",
-        "target": "Amogus",
-        "texture": "angry"
-      },
-      {
-        "type": "speech",
-        "target": "Amogus",
-        "text": "Hey!1!!1! You can't just deal with my challeneg of your view-point in such a mature way! I wan'ted to argue with you!!!"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Lucy you want a piece of brioche? They have an offer for three brioche for the price of two."
-      },
-      {
-        "type": "sub",
-        "target": "Lucy",
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "The school hosting an offer for food in the cafeteria? Well that's unheard of."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "What's next? Police are going to barge through the door and yell for everyone to get down?"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Nah, that would be too cliche, so you want the brioche or..?"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "Yes I'll have one plea..."
-      },
-      {
-        "type": "sub",
-        "target": null,
-        "position": 0
-      },
-      {
-        "type": "speech",
-        "target": "POLICE",
-        "text": "*CRASH* EVERYONE GET DOWN ON THE FLOOR IMMEDIATELY!!!"
-      },
-      {
-        "type": "texture",
-        "target": "Lucy",
-        "texture": "smol"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "bruh."
-      },
-      {
-        "type": "texture",
-        "target": "Lucy",
-        "texture": "neutral"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "How is this happening right now??"
-      },
-      {
-        "type": "sub",
-        "target": "Gryphon",
-        "position": 0
-      },
-      {
-        "type": "texture",
-        "target": "Gryphon",
-        "texture": "angry"
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "You did this to us Lucy its all your fault!"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "Gryphon what.. what are you saying?"
-      },
-      {
-        "type": "texture",
-        "target": "Gryphon",
-        "texture": "angry"
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "You jinxed it again Lucy this always happens when I'm with you!!"
-      },
-      {
-        "type": "texture",
-        "target": "Lucy",
-        "texture": "angry"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "How is it every my fault?!?! These are all just crazy coincidences! It's not my fault..."
-      },
-      {
-        "type": "sub",
-        "target": "Chad",
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Calm down you two, you're attracting the attention of the police."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "Here both of you have a brioche and calm down."
-      },
-      {
-        "type": "texture",
-        "target": "Gryphon",
-        "texture": "neutral"
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "Thanks Chad. I'm sorry Lucy I was just..."
-      },
-      {
-        "type": "sub",
-        "target": "Amogus",
-        "position": 0
-      },
-      {
-        "type": "texture",
-        "target": "Amogus",
-        "texture": "angry"
-      },
-      {
-        "type": "speech",
-        "target": "Amogus",
-        "text": "Shut uyp all of you and get down on the floor the police ara looking thes way >:(("
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": ";_; ok"
-      },
-      {
-        "type": "speech",
-        "target": "...",
-        "text": "We sat in a corner of the cafeteria. Lucy, Gryphon and Chad were quietly eating their brioche buns. Amogus was still fuming."
-      },
-      {
-        "type": "speech",
-        "target": "POLICE",
-        "text": "YOU FIVE OVER THERE HANDS ON YOUR HEADS! DROP WHATEVER YOU'RE HOLDING!!"
-      },
-      {
-        "type": "speech",
-        "target": "Amogus",
-        "text": "Greata the poilce are coming thes way..."
-      },
-      {
-        "type": "sub",
-        "target": null,
-        "position": 0
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Guys hurry up and finish your buns or they'll go cold 🥶"
-      },
-      {
-        "type": "sub",
-        "target": "Lucy",
-        "position": 0
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "That's really what you're worried about right now?"
-      },
-      {
-        "type": "speech",
-        "target": "Chad",
-        "text": "Brioche takes priority over everything in my book 📖"
-      },
-      {
-        "type": "sub",
-        "target": "Gryphon",
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "Hey look I got bugs in my brioche! Eat up little ones I can share."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "Weirdo."
-      },
-      {
-        "type": "speech",
-        "target": "POLICE",
-        "text": "WE WILL BE PERFORMING BODY CHECKS FOR ANY SUSPICIOUS ITEMS. EVERYONE PLEASE FILE NEXT TO THE LEFT EXIT OF THE CAFETERIA!"
-      },
-      {
-        "type": "speech",
-        "target": "Amogus",
-        "text": "oh noes."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "bruh."
-      },
-      {
-        "type": "speech",
-        "target": "Gryphon",
-        "text": "I suppose we have to go line up guys... I just hope they don't find my centipede box in my left trouser pocket."
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "bruuh."
-      },
-      {
-        "type": "sub",
-        "target": null,
-        "position": 0
-      },
-      {
-        "type": "sub",
-        "target": null,
-        "position": 1
-      },
-      {
-        "type": "speech",
-        "target": "You",
-        "text": "Guys someone left part of their brioche here!"
-      },
-      {
-        "type": "speech",
-        "target": "Lucy",
-        "text": "shush."
-      },
-      {
-        "type": "speech",
-        "target": "You",
-        "text": "..."
-      },
-      {
-        "type": "speech",
-        "target": "You",
-        "text": "..."
-      },
-      {
-        "type": "speech",
-        "target": "...",
-        "text": "Guess I should go line up as well."
-      }
-    ]
-  }
-  
+  "background": "cafeteria.jpg",
+  "actions": [
+    {
+      "type": "sub",
+      "target": "Chad",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Let's get some bread 😎."
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "You dragged us to the cafeteria to get bread??"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "I always get that bread at the cafeteria, big W moment."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Let me guess, brioche enjoyer?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "y e s."
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "You must clearly be beffudled by the media Chad, everyone knows Pretzels are the bestest bread worldwide!!"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "I am not interested in debating 🗣 with someone who has clearly positioned themselves against my viewpoint and challenge me simply for the sake of arguing."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Anyone else want brioche?"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "I'll have a piece if you don't mind!"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "You got it brother."
+    },
+    {
+      "type": "texture",
+      "target": "Amogus",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Hey!1!!1! You can't just deal with my challeneg of your view-point in such a mature way! I wan'ted to argue with you!!!"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Lucy you want a piece of brioche? They have an offer for three brioche for the price of two."
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "The school hosting an offer for food in the cafeteria? Well that's unheard of."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "What's next? Police are going to barge through the door and yell for everyone to get down?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Nah, that would be too cliche, so you want the brioche or..?"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Yes I'll have one plea..."
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "POLICE",
+      "text": "*CRASH* EVERYONE GET DOWN ON THE FLOOR IMMEDIATELY!!!"
+    },
+    {
+      "type": "texture",
+      "target": "Lucy",
+      "texture": "smol"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "bruh."
+    },
+    {
+      "type": "texture",
+      "target": "Lucy",
+      "texture": "neutral"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "How is this happening right now??"
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 0
+    },
+    {
+      "type": "texture",
+      "target": "Gryphon",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "You did this to us Lucy its all your fault!"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Gryphon what.. what are you saying?"
+    },
+    {
+      "type": "texture",
+      "target": "Gryphon",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "You jinxed it again Lucy this always happens when I'm with you!!"
+    },
+    {
+      "type": "texture",
+      "target": "Lucy",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "How is it every my fault?!?! These are all just crazy coincidences! It's not my fault..."
+    },
+    {
+      "type": "sub",
+      "target": "Chad",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Calm down you two, you're attracting the attention of the police."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Here both of you have a brioche and calm down."
+    },
+    {
+      "type": "texture",
+      "target": "Gryphon",
+      "texture": "neutral"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Thanks Chad. I'm sorry Lucy I was just..."
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
+      "position": 0
+    },
+    {
+      "type": "texture",
+      "target": "Amogus",
+      "texture": "angry"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Shut uyp all of you and get down on the floor the police ara looking thes way >:(("
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": ";_; ok"
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "We sat in a corner of the cafeteria. Lucy, Gryphon and Chad were quietly eating their brioche buns. Amogus was still fuming."
+    },
+    {
+      "type": "speech",
+      "target": "POLICE",
+      "text": "YOU FIVE OVER THERE HANDS ON YOUR HEADS! DROP WHATEVER YOU'RE HOLDING!!"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Greata the poilce are coming thes way..."
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Guys hurry up and finish your buns or they'll go cold 🥶"
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "That's really what you're worried about right now?"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Brioche takes priority over everything in my book 📖"
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Hey look I got bugs in my brioche! Eat up little ones I can share."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Weirdo."
+    },
+    {
+      "type": "speech",
+      "target": "POLICE",
+      "text": "WE WILL BE PERFORMING BODY CHECKS FOR ANY SUSPICIOUS ITEMS. EVERYONE PLEASE FILE NEXT TO THE LEFT EXIT OF THE CAFETERIA!"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "oh noes."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "bruh."
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "I suppose we have to go line up guys... I just hope they don't find my centipede box in my left trouser pocket."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "bruuh."
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 0
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "You",
+      "text": "Guys someone left part of their brioche here!"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "shush."
+    },
+    {
+      "type": "speech",
+      "target": "You",
+      "text": "..."
+    },
+    {
+      "type": "speech",
+      "target": "You",
+      "text": "..."
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "Guess I should go line up as well."
+    }
+  ]
+}

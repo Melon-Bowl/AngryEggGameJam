@@ -52,6 +52,7 @@ class Chapter {
    * @param {Number} scene_index How many scenes have been shown from this chapter subtract 1
    */
   start_next_scene(to_scene, scene_index) {
+    this.play_theme();
     this.current_scene = to_scene;
     const scene = this.scenes[to_scene];
     this.background = scene.background;
@@ -59,7 +60,13 @@ class Chapter {
     this.calc_boom_chances(scene_index);
     this.current_action = -1;
     this.positions = [null, null, null];
+    this.characters.forEach(c => c.set_texture('neutral'));
     return new Promise(resolve => (this.end_scene = resolve));
+  }
+
+  play_theme() {
+    if (this.index === 0) this.music.play_track('chapter_1');
+    else this.music.play_track('main_theme');
   }
 
   count_boom_opportunities_for_char(char_name) {
@@ -151,7 +158,7 @@ class Chapter {
         const character = this.characters.find(c => c.name === action.target);
         return character.set_texture(action.texture);
       case 'play_sound':
-        return this.music.play_track('chapter_1');
+        return this.music.play_track(action.track || 'chapter_1');
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);
     }
