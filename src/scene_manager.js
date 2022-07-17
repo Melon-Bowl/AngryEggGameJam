@@ -2,7 +2,7 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds, music, boomer, store }) {
+  constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
 
     this.menu = new MenuManager({ backgrounds });
@@ -14,6 +14,7 @@ class SceneManager {
         backgrounds,
         music,
         boomer,
+        die,
         scenes: [
           'src/scenes/1-1.json',
           'src/scenes/1-2.json',
@@ -27,6 +28,7 @@ class SceneManager {
         backgrounds,
         music,
         boomer,
+        die,
         scenes: ['src/scenes/2-1.json'],
         total_boom_chances: [0]
       })

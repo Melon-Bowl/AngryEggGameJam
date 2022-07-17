@@ -11,6 +11,7 @@ class Chapter {
     characters,
     backgrounds,
     boomer,
+    die,
     total_boom_chances
   }) {
     this.scene_files = scenes;
@@ -19,6 +20,7 @@ class Chapter {
     this.backgrounds = backgrounds;
     this.music = music;
     this.boomer = boomer;
+    this.die = die;
     this.total_boom_chances = total_boom_chances || this.scene_files.fill(0);
 
     if (!scenes || !scenes.length)
@@ -125,11 +127,12 @@ class Chapter {
       }, {});
   }
 
-  async execute_action(action) {
+  async execute_action(action, boom_message = false) {
     switch (action.type) {
       case 'speech':
         await this.text_ui.show_text(action.target, action.text);
 
+        if (boom_message) return;
         for (const c of this.characters) {
           const can_boom = this.boom_chances[c.name].opps.includes(
             this.data.indexOf(action)
@@ -157,6 +160,8 @@ class Chapter {
     const small_chars = [];
     const prev_textures = [];
 
+    this.die.throw();
+
     this.positions.forEach((name, i) => {
       if (!name || i === position) return;
       const char = this.characters.find(c => c.name === name);
@@ -166,6 +171,17 @@ class Chapter {
         char.set_texture('small');
       }
     });
+
+    await this.execute_action(
+      {
+        type: 'speech',
+        target: this.positions[position],
+        text: 'Roll of the dice'
+      },
+      true
+    );
+
+    this.die.land();
 
     const explosion = this.boomer.boom(Chapter.CHARACTER_POSITIONS[position]);
     await this.substitute_character({ target: null, position, quick: true });

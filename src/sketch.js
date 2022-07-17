@@ -1,7 +1,14 @@
 const store = new StorageManager();
 const text_ui = new TextBox();
+const die = new DieController();
 
-const background_files = ['school.png', 'school_building.jpg', 'staff_room.jpg', 'cafeteria.jpg', 'sports_hall.jpg'];
+const background_files = [
+  'school.png',
+  'school_building.jpg',
+  'staff_room.jpg',
+  'cafeteria.jpg',
+  'sports_hall.jpg'
+];
 const backgrounds = {};
 
 const music = new Tracks();
@@ -33,10 +40,9 @@ const scene_man = new SceneManager({
   backgrounds,
   music,
   boomer,
-  store
+  store,
+  die
 });
-
-const die = new DieController();
 
 function preload() {
   for (const bg of background_files) {
