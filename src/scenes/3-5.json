@@ -1,0 +1,207 @@
+{
+    "background": "graveyard.jpg",
+    "ending_name": null,
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 1
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "Wow I can't believe we all managed to get through that."
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "Yes!! We're all alive."
+      },
+      {
+        "type": "sub",
+        "target": "Amogus",
+        "position": 1
+      },
+      {
+        "type": "text",
+        "target": "Amogus",
+        "text": "Hurrah I'm alive!"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "Yes! You even managed to you an apostrophe properly! This really is a miracle."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "I've gone through so much to get this ending."
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 0
+      },
+      {
+        "type": "text",
+        "target": "Chad",
+        "text": "This is a massive W moment my G's. Let's go to a bakery, brioche bunz all on me."
+      },
+      {
+        "type": "text",
+        "target": "Chad",
+        "text": "...I guess I can buy someone a pretzel too."
+      },
+      {
+        "type": "text",
+        "target": "Amogus",
+        "text": "Yay my choices and tastes have finally been accepted by Chad!!"
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "Chad and Amogus went ahead to the bakery. Not sure what bakery will be open in the middle of the night but I guess Chad's built differently."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "I started following them but overheard Gryphon and Lucy talking behing me."
+      },
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 1
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "So what did you want to talk about Lucy?"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "*blushing* Umm.. there's something I've been wanting to tell you."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "What is it Lucy? Do you have a bug to give to me?!?!"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "Umm, no its actually something else, something better."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "Something better than a bug?! A whole collection of rare insects from the Amazon Rainforest?!?!!?"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "...bruh"
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "Sorry I'm just pulling your leg.. metaphorically of course. I would never touch a woman without her explicit consent."
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "I like you Gryphon OwO"
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "I... umm"
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "I like you too Lucy <3"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "Gryphon",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "I really feel like I shouldn't have heard this. I'll head out now."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "This is probably the best possible ending. I should head home."
+      }
+    ]
+}
+  
