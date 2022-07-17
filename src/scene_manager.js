@@ -10,7 +10,7 @@ class SceneManager {
 
     this.chapters = [
       new Chapter({
-        index: 1,
+        index: 0,
         text_ui,
         characters,
         backgrounds,
@@ -25,7 +25,7 @@ class SceneManager {
         total_boom_chances: [0, 0.9, 0.9]
       }),
       new Chapter({
-        index: 2,
+        index: 1,
         text_ui,
         characters,
         backgrounds,

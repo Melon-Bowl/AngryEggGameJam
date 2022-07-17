@@ -1,4 +1,3 @@
-const store = new StorageManager();
 const text_ui = new TextBox();
 const die = new DieController();
 
@@ -13,6 +12,8 @@ const backgrounds = {};
 
 const music = new Tracks();
 const boomer = new BoomController({ music });
+
+const store = new StorageManager({ boomer });
 
 const characters = [
   new Character('Amogus', {
