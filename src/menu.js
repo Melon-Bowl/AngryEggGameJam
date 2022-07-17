@@ -63,11 +63,12 @@ class MenuManager {
 
     // Title
     textAlign(CENTER, CENTER);
-    textSize(80);
+    textSize(50);
     fill(255, opacity);
     stroke(0, opacity);
     strokeWeight(5);
-    text('Our Game', width / 2, height * 0.3);
+    text(`Don't say "Roll of the dice"`, width / 2, height * 0.2);
+    text(`Or you will boom!"`, width / 2, height * 0.3);
 
     // Buttons
     textSize(40);

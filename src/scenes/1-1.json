@@ -102,7 +102,7 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "Must be a pretty desperate situation for them to have sent you to work with me, Gryphon and him. Anyway who's that sussy looking guy next to you?"
+      "text": "Must be a pretty desperate situation for them to have sent you to work with us. Anyway who's that sussy looking guy next to you?"
     },
     {
       "type": "speech",
@@ -130,6 +130,11 @@
       "text": "My name is Amogus, I am from class 2-A and I have been sent here to inform you guys that us 5 have been asked to investigate a serious that the school is currently facing."
     },
     {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 1
+    },
+    {
       "type": "speech",
       "target": "Lucy",
       "text": "Wait hold the phone, how did a guy like you even get into class 1?"
@@ -140,6 +145,11 @@
       "text": "Me when the 🫱📞"
     },
     {
+      "type": "texture",
+      "target": "Amogus",
+      "texture": "angry"
+    },
+    {
       "type": "speech",
       "target": "Amogus",
       "text": "What do you mean by thamt Lucy?1?!? Do you have a predjudice against' sussy folk? >:("
@@ -148,6 +158,11 @@
       "type": "speech",
       "target": "Lucy",
       "text": "No its literally the fact that you speak with typos."
+    },
+    {
+      "type": "texture",
+      "target": "Amogus",
+      "texture": "neutral"
     },
     {
       "type": "speech",

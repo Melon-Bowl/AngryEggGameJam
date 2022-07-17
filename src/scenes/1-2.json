@@ -9,7 +9,218 @@
     {
       "type": "speech",
       "target": "Lucy",
-      "text": "This is a second scene"
+      "text": "The walk to the staff room has never felt this long before..."
+    },
+    {
+      "type": "sub",
+      "target": "Chad",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "We rolling, this is literally squad goals. Besties be bussin in the staff room sheeesh no cap fr fr 😎"
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "I encountered 34 insects on our journey to the staff room!"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Yes Gryphon good for you, maybe you can encounter some bitc..."
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Hey guys hwhere are the teacher's? They are supposed to be giving us a brief of the misision"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Good point, I wonder if they went for a bathroom break or something lol"
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Hey guys look this bug led me to this conveniently placed case file which contains all the information we need to know!"
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "Good job Gryphon; you and your buhgs aren't so cring after all."
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Thanks Amogus! Anyway, let's open it up and read it shall we?"
+    },
+    {
+      "type": "sub",
+      "target": "Chad",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Allow me to announce the contents of this valuable document 😎📚"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Chad maybe now is not the time and place for your eloquence we need to quickly ..."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "This document 📜 reads as such. *clears throat in a chad way 😎*"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Students 🧑‍🎓👩‍🎓, our school is in grave danger 💀! There is a bomb among 🤨 the halls 😳. We are not aware its exact location 📍 so we need you to locate it."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "P.s. 🥱 please be careful with what you say because authorities sus🤨pect that the bomb could be voice activated 😬."
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "It says good luck in big letters at the bottom, and... signed by the principal ?!?!"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Thanks for reading that out Chad, I found it extremely engaging and thought it was splendidly recited."
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "Its what I do. 😎"
+    },
+    {
+      "type": "sub",
+      "target": "Lucy",
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "First of all, 'It's', you missed an apostrophe Chad. Second, this situation does not look like any good."
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "So what to do niw?"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Guess we just have to explore the school and try to find clues about the location of the bomb."
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Ye. We have to be careful with what we say as well."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "True, we don't know what the catchphrase is, we are constantly in danger until we figure out how to disarm the bomb."
+    },
+    {
+      "type": "sub",
+      "target": "Amogus",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": "I propopose we write down a key phrase that we use in dire circumstance's!"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "It might be good to have a backup option like that if we find ourselves trapped in a corner."
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "The students seem to have written something on a piece of paper, I didn't really see what it said."
+    },
+    {
+      "type": "speech",
+      "target": "You",
+      "text": "Hey guys do you mind if I see what the phrase is?..."
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "n o"
+    },
+    {
+      "type": "speech",
+      "target": "Chad",
+      "text": "..."
+    },
+    {
+      "type": "speech",
+      "target": "Amogus",
+      "text": ",,,"
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "..."
+    },
+    {
+      "type": "sub",
+      "target": "Gryphon",
+      "position": 0
+    },
+    {
+      "type": "speech",
+      "target": "Gryphon",
+      "text": "Alright guys, let's look for more bugs!"
+    },
+    {
+      "type": "speech",
+      "target": "Lucy",
+      "text": "Yes! Wait, you meant.. bombs. Right?"
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 0
+    },
+    {
+      "type": "sub",
+      "target": null,
+      "position": 1
+    },
+    {
+      "type": "speech",
+      "target": "...",
+      "text": "They set out from the teacher room. I promptly followed them."
     }
+
   ]
 }
