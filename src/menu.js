@@ -37,22 +37,21 @@ class Button {
 }
 
 class MenuManager {
-  constructor({ backgrounds }) {
+  constructor({ backgrounds, start_credits }) {
     this.backgrounds = backgrounds;
+    this.start_credits = start_credits;
 
     this.on_play = () => console.error('No on play func');
 
     this.buttons = [
       new Button('Play', [250, 600 * 0.45, 300, 75], () => this.on_play()),
-      new Button('Credits', [250, 600 * 0.65, 300, 75], this.on_credits)
+      new Button('Credits', [250, 600 * 0.65, 300, 75], () => start_credits())
     ];
   }
 
   wait_for_play() {
     return new Promise(resolve => (this.on_play = resolve));
   }
-
-  on_credits = () => {};
 
   handle_click() {
     this.buttons.forEach(b => b.handle_click());

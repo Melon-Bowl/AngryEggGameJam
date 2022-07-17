@@ -2,13 +2,19 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
+  static CREDITS_LH = 20;
+  static CREDITS_SPEED = 1;
+
   constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
     this.boomer = boomer;
     this.music = music;
     this.die = die;
 
-    this.menu = new MenuManager({ backgrounds });
+    this.menu = new MenuManager({
+      backgrounds,
+      start_credits: () => this.credits()
+    });
 
     this.chapters = [
       new Chapter({
@@ -71,6 +77,8 @@ class SceneManager {
       [250, 600 * 0.55 - 30, 300, 60],
       () => this.restart_game()
     );
+
+    this.end_credits_callback = null;
   }
 
   restart_game() {
@@ -104,6 +112,8 @@ class SceneManager {
         return this.menu.handle_click();
       case 'end':
         return this.end_button.handle_click();
+      case 'credits':
+        return this.end_credits_callback();
       default:
         return;
     }
@@ -202,6 +212,40 @@ class SceneManager {
     pop();
   }
 
+  async credits() {
+    await this.fade('out', 6);
+    this.state = 'credits';
+
+    this.credits_progress = -(SceneManager.CREDITS_LH * credits_text.length);
+    await new Promise(resolve => (this.end_credits_callback = resolve));
+
+    this.state = 'menu';
+    await this.fade('in', 6);
+  }
+
+  update_credits() {
+    this.credits_progress += SceneManager.CREDITS_SPEED;
+    if (
+      this.credits_progress >
+      SceneManager.CREDITS_LH * credits_text.length + height
+    ) {
+      this.end_credits_callback();
+    }
+  }
+
+  show_credits() {
+    background(0);
+    textAlign(CENTER, CENTER);
+    fill(255);
+    stroke(255);
+    strokeWeight(0);
+    textSize(16);
+    for (let i = 0; i < credits_text.length; i++) {
+      const y = height - (i * SceneManager.CREDITS_LH + this.credits_progress);
+      text(credits_text[credits_text.length - 1 - i], width / 2, y);
+    }
+  }
+
   show() {
     if (this.is_fading) {
       const opacity = this.fade_progress;
@@ -219,6 +263,9 @@ class SceneManager {
         return this.show_chapter_title();
       case 'in-scene':
         return this.chapters[this.current_chapter].show();
+      case 'credits':
+        this.show_credits();
+        return this.update_credits();
       default:
         throw new Error('Unknown scene manager state: ' + this.state);
     }
