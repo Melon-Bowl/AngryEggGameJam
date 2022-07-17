@@ -16,18 +16,18 @@ class StorageManager {
   read_from_cache() {
     const val = localStorage.getItem(StorageManager.CACHE_KEY);
     if (!val) return null;
-    const { chapter, scene, timestamp } = JSON.parse(val);
+    const { chapter, scenes, timestamp } = JSON.parse(val);
     if (new Date() - timestamp > 1000 * 3600 * 3) return null;
     this.send_toast();
-    return { chapter, scene };
+    return { chapter, scenes };
   }
 
-  save_to_cache(chapter, scene) {
+  save_to_cache(chapter, scenes) {
     localStorage.setItem(
       StorageManager.CACHE_KEY,
       JSON.stringify({
         chapter,
-        scene,
+        scenes,
         timestamp: new Date()
       })
     );

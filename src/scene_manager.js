@@ -105,17 +105,33 @@ class SceneManager {
       await timeout(SceneManager.CHAPTER_TITLE_DURATION);
       await this.fade('out', 4);
       this.state = 'in-scene';
-      const start_index =
-        cache && cache.chapter === this.current_chapter ? cache.scene : 0;
-      for (let i = start_index; i < chapter.scenes.length; i++) {
-        const scene = chapter.start_next_scene(i === start_index ? i : null);
-        this.store.save_to_cache(this.current_chapter, chapter.current_scene);
+
+      let prev_history = [];
+      let scenes_to_show = [];
+      if (cache && cache.chapter === this.current_chapter) {
+        scenes_to_show = chapter.scenes
+          .map((a, i) => i)
+          .filter(i => !cache.scenes.includes(i));
+        shuffle(scenes_to_show, true);
+        prev_history = cache.scenes.slice(0, cache.scenes.length - 1);
+        scenes_to_show.unshift(cache.scenes[cache.scenes.length - 1]);
+      } else {
+        scenes_to_show = shuffle(chapter.scenes.map((a, i) => i));
+      }
+
+      for (const scene_index of scenes_to_show) {
+        const scene = chapter.start_next_scene(scene_index);
+        this.store.save_to_cache(this.current_chapter, [
+          ...prev_history,
+          ...scenes_to_show.slice(0, scenes_to_show.indexOf(scene_index) + 1)
+        ]);
         await this.fade('in');
         chapter.allowed_to_progress = true;
         await scene;
         chapter.allowed_to_progress = false;
         await this.fade('out', 4);
       }
+
       this.current_chapter++;
     }
     this.state = 'end';
