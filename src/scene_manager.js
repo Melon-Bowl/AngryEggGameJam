@@ -101,7 +101,8 @@ class SceneManager {
       await timeout(SceneManager.CHAPTER_TITLE_DURATION);
       await this.fade('out', 4);
       this.state = 'in-scene';
-      const start_index = cache ? cache.scene : 0;
+      const start_index =
+        cache && cache.chapter === this.current_chapter ? cache.scene : 0;
       for (let i = start_index; i < chapter.scenes.length; i++) {
         const scene = chapter.start_next_scene(i === start_index ? i : null);
         this.store.save_to_cache(this.current_chapter, chapter.current_scene);
