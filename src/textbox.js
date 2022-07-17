@@ -10,6 +10,8 @@ class TextBox {
     this.name = null;
     this.text = null;
     this.text_index = 0;
+
+    this.finished_text_callback = null;
   }
 
   get showing() {
@@ -43,10 +45,12 @@ class TextBox {
     this.name = name;
     this.text = text;
     this.text_index = 0;
+    return new Promise(resolve => (this.finished_text_callback = resolve));
   }
 
   clear_text() {
     this.name = null;
+    this.finished_text_callback();
   }
 
   _mouse_in_text_area() {

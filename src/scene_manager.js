@@ -2,30 +2,37 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds, music, boomer, store }) {
+  constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
+    this.boomer = boomer;
 
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
       new Chapter({
+        index: 0,
         text_ui,
         characters,
         backgrounds,
         music,
         boomer,
+        die,
         scenes: [
           'src/scenes/1-1.json',
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
-        ]
+        ],
+        total_boom_chances: [0, 0.9, 0.9]
       }),
       new Chapter({
+        index: 1,
         text_ui,
         characters,
         backgrounds,
         music,
         boomer,
+        die,
+        total_boom_chances: [0],
         scenes: [
           'src/scenes/2-1.json',
           'src/scenes/2-2.json',
@@ -120,16 +127,21 @@ class SceneManager {
       }
 
       for (const scene_index of scenes_to_show) {
-        const scene = chapter.start_next_scene(scene_index);
-        this.store.save_to_cache(this.current_chapter, [
+        const scene_history = [
           ...prev_history,
           ...scenes_to_show.slice(0, scenes_to_show.indexOf(scene_index) + 1)
-        ]);
+        ];
+        const scene = chapter.start_next_scene(
+          scene_index,
+          scene_history.length - 1
+        );
+        this.store.save_to_cache(this.current_chapter, scene_history);
         await this.fade('in');
         chapter.allowed_to_progress = true;
         await scene;
         chapter.allowed_to_progress = false;
         await this.fade('out', 4);
+        if (this.boomer.boomed_character) break;
       }
 
       this.current_chapter++;

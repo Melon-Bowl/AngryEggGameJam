@@ -23,7 +23,7 @@ class DieController {
   }
 
   land() {
-    if (this.rolling) return null;
+    if (!this.rolling) return null;
     this.rolling = false;
     return this.current_face + 1;
   }
