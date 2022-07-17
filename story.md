@@ -18,11 +18,12 @@ Different endings (decided by the roll of a die, you can chose to override the r
 *Endings are partially based on who boomed*
 
 - __Grief ending 1__: Either Lucy or Gryphon boomed so they grief for each other
-- __Grief ending 2__: Amongus or gigachad booms and although the friends miss their comrade, the school is safe
-- __Good ending__: The policeman off screen booms and you see a small explosion in the background. None of the characters die and the school is saved 
+- __Grief ending 2__: Amogus booms. Everyone is sad so they give him a send off pretzel.
+- __Grief ending 3__: Gigachad booms. Everyone is devastaded and they send him off with dozens of brioche buns and grief for him
 - __Perfect ending__: No one booms at all and you get a message on screen that the bomb has been defused
 - __Scary ending__: (triggered by an addional random event): you get teleported to the void where the game pretends to lag and you have to restart
 - __Genocide ending__: Perfect ending but there is a small chance that *you* go and blow everyone up and you a bunch of booms and all the characters **die**
+- __Good ending__: The policeman off screen booms and you see a small explosion in the background. None of the characters die and the school is saved 
 
 - __Secret ending__: bomb doesn't blow up but everyone finds out you're from another universe (the real world) and kill you
 - __Secret ending 2__: bomb blows up but you are lucky so you get away with your love interest and then she kills you
