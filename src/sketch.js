@@ -1,3 +1,4 @@
+const store = new StorageManager();
 const text_ui = new TextBox();
 
 const background_files = ['school.png'];
@@ -9,7 +10,7 @@ const boomer = new BoomController({ music });
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
-    angry: 'assets/characters/amogus_angry.png',
+    angry: 'assets/characters/amogus_angry.png'
   }),
   new Character('Gryphon', {
     neutral: 'assets/characters/gryphon.png',
@@ -58,10 +59,12 @@ function setup() {
   const cnv = createCanvas(800, 600);
   boomer.set_canvas(cnv);
   scene_man.setup();
+  store.send_toast();
 }
 
 function draw() {
   cursor();
   scene_man.show();
   die.show();
+  store.show();
 }
