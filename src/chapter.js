@@ -174,10 +174,10 @@ class Chapter {
     this.positions.forEach((name, i) => {
       if (!name || i === position) return;
       const char = this.characters.find(c => c.name === name);
-      if (char.has_texture('small')) {
+      if (char.has_texture('smol')) {
         small_chars.push(char);
         prev_textures.push(char.current_texture);
-        char.set_texture('small');
+        char.set_texture('smol');
       }
     });
 
