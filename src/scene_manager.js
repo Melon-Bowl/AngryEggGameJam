@@ -40,7 +40,7 @@ class SceneManager {
         music,
         boomer,
         die,
-        total_boom_chances: [0.9, 0.9, 0.9],
+        total_boom_chances: [0.15, 0.3, 0.8],
         scenes: [
           'src/scenes/2-1.json',
           'src/scenes/2-2.json',
