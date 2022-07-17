@@ -10,7 +10,8 @@ const background_files = [
   'storage.jpg',
   'hallway.jpg',
   'candles.jpg',
-  'graveyard.jpg'
+  'graveyard.jpg',
+  'stars.jpg'
 ];
 const backgrounds = {};
 

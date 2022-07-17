@@ -22,7 +22,7 @@ class EndChapter extends Chapter {
       case 'Chad':
         return this.music.play_track('good_ending');
       default: // No one dies
-        return this.music.play_track('good_ending');
+        return this.music.play_track('boom_theme');
     }
   }
 }
