@@ -18,7 +18,8 @@ class SceneManager {
           'src/scenes/1-1.json',
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
-        ]
+        ],
+        total_boom_chance: 0.9
       }),
       new Chapter({
         text_ui,

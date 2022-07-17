@@ -4,13 +4,22 @@ class Chapter {
     [480, 130, 300, 550]
   ];
 
-  constructor({ scenes, text_ui, music, characters, backgrounds, boomer }) {
+  constructor({
+    scenes,
+    text_ui,
+    music,
+    characters,
+    backgrounds,
+    boomer,
+    total_boom_chance = 0
+  }) {
     this.scene_files = scenes;
     this.text_ui = text_ui;
     this.characters = characters;
     this.backgrounds = backgrounds;
     this.music = music;
     this.boomer = boomer;
+    this.total_boom_chance = total_boom_chance;
 
     if (!scenes || !scenes.length)
       throw new Error('Chapter must have story file');
@@ -20,11 +29,14 @@ class Chapter {
     this.background = null;
 
     this.current_action = -1;
-    this.positions = [null, null, null];
+    this.positions = [null, null];
     this.substituting_characters = false;
 
     this.allowed_to_progress = false;
     this.end_scene = null;
+
+    this.boom_chances = {};
+    this.is_booming = false;
   }
 
   preload() {
@@ -36,15 +48,95 @@ class Chapter {
     const scene = this.scenes[to_scene];
     this.background = scene.background;
     this.data = scene.actions;
+    this.calc_boom_chances();
     this.current_action = -1;
     this.positions = [null, null, null];
     return new Promise(resolve => (this.end_scene = resolve));
   }
 
-  execute_action(action) {
+  count_boom_opportunities_for_char(char_name) {
+    const witnesses = ['Lucy', 'Gryphon'].filter(n => n !== char_name);
+
+    const opps = [];
+    const current_witnesses = [null, null];
+    for (let i = 0; i < this.data.length; i++) {
+      const action = this.data[i];
+      switch (action.type) {
+        case 'sub':
+          current_witnesses[action.position] = action.target;
+          const other = current_witnesses[action.position ? 0 : 1];
+          current_witnesses[action.position ? 0 : 1] =
+            other === action.target ? null : other;
+          break;
+        case 'speech':
+          if (
+            current_witnesses.some(w => witnesses.includes(w)) &&
+            current_witnesses.includes(char_name)
+          )
+            opps.push(i);
+          break;
+        default:
+          break;
+      }
+    }
+    return opps;
+  }
+
+  calc_individual_boom_prob(total_chance, char_name) {
+    if (!total_chance) return [0, []];
+    const opps = this.count_boom_opportunities_for_char(char_name);
+    if (!opps.length) return [0, []];
+
+    // n := count of opp.
+    // P := total chance
+    // p := individual chance (to solve for)
+
+    // Failed calculation
+    // P = (n choose 1) * (p) * (1 - p)^(n - 1)
+    // P = np * (1 - p)^(n - 1)
+
+    // Next attempt
+    // X ~ B(n, p)
+    // P = P(X > 0) = 1 - P(X = 0)
+    // P(X = 0) = (1 - p)^n
+    // P = 1 - (1 - p)^n
+    // 1 - P = (1 - p)^n
+    // 1 - p = (1 - P)^(1 / n)
+    // p = 1 - (1 - P)^(1 / n)
+
+    const p = 1 - Math.pow(1 - total_chance, 1 / opps.length);
+
+    return [p, opps];
+  }
+
+  calc_boom_chances() {
+    this.boom_chances = this.characters
+      .map(c => c.name)
+      .reduce((acc, cur) => {
+        const [p, opps] = this.calc_individual_boom_prob(
+          this.total_boom_chance,
+          cur
+        );
+        return { ...acc, [cur]: { p, opps } };
+      }, {});
+  }
+
+  async execute_action(action) {
     switch (action.type) {
       case 'speech':
-        return this.text_ui.show_text(action.target, action.text);
+        await this.text_ui.show_text(action.target, action.text);
+
+        for (const c of this.characters) {
+          const can_boom = this.boom_chances[c.name].opps.includes(
+            this.data.indexOf(action)
+          );
+          console.log(c.name, can_boom, this.boom_chances[c.name].p);
+          if (can_boom && Math.random() < this.boom_chances[c.name].p) {
+            this.boom(this.positions.indexOf(c.name));
+            return;
+          }
+        }
+        return;
       case 'sub':
         return this.substitute_character(action);
       case 'texture':
@@ -52,14 +144,13 @@ class Chapter {
         return character.set_texture(action.texture);
       case 'play_sound':
         return this.music.play_track('chapter_1');
-      case 'boom':
-        return this.boom(action.position);
       default:
         throw new Error('Unknown action type found in chapter: ' + action.type);
     }
   }
 
   async boom(position) {
+    this.is_booming = true;
     const small_chars = [];
     const prev_textures = [];
 
@@ -78,6 +169,7 @@ class Chapter {
     await explosion;
 
     small_chars.forEach((c, i) => c.set_texture(prev_textures[i]));
+    this.is_booming = false;
   }
 
   async substitute_character({ target, position, quick }) {
@@ -110,7 +202,8 @@ class Chapter {
       //this.data[this.current_action + 1] &&
       !this.text_ui.showing &&
       !this.substituting_characters &&
-      this.allowed_to_progress
+      this.allowed_to_progress &&
+      !this.is_booming
     );
   }
 
