@@ -4,11 +4,13 @@ class SceneManager {
 
   constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
+    this.boomer = boomer;
 
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
       new Chapter({
+        index: 1,
         text_ui,
         characters,
         backgrounds,
@@ -23,6 +25,7 @@ class SceneManager {
         total_boom_chances: [0, 0.9, 0.9]
       }),
       new Chapter({
+        index: 2,
         text_ui,
         characters,
         backgrounds,
@@ -134,6 +137,7 @@ class SceneManager {
         await scene;
         chapter.allowed_to_progress = false;
         await this.fade('out', 4);
+        if (this.boomer.boomed_character) break;
       }
 
       this.current_chapter++;

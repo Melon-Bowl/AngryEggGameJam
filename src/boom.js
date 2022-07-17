@@ -7,6 +7,9 @@ class BoomController {
     this.boom_path = 'assets/boom.gif';
     this.boom_gif = null;
     this.boom_width = 300;
+
+    this.boomed_character = null;
+    this.boomed_chapter = -1;
   }
 
   set_canvas(cnv) {
@@ -30,7 +33,7 @@ class BoomController {
     return [midx - this.boom_width / 2, midy - boom_height / 2];
   }
 
-  async boom(rect) {
+  async boom(rect, char_name, chapter) {
     const pos = this.calc_pos_from_rect(rect);
     this.boom_gif.position(...pos);
     this.boom_gif.removeAttribute('src');
@@ -41,5 +44,8 @@ class BoomController {
     await timeout(BoomController.GIF_DURATION);
 
     this.boom_gif.hide();
+
+    this.boomed_character = char_name;
+    this.boomed_chapter = chapter;
   }
 }

@@ -5,6 +5,7 @@ class Chapter {
   ];
 
   constructor({
+    index,
     scenes,
     text_ui,
     music,
@@ -14,6 +15,7 @@ class Chapter {
     die,
     total_boom_chances
   }) {
+    this.index = index;
     this.scene_files = scenes;
     this.text_ui = text_ui;
     this.characters = characters;
@@ -132,7 +134,7 @@ class Chapter {
       case 'speech':
         await this.text_ui.show_text(action.target, action.text);
 
-        if (boom_message) return;
+        if (boom_message || this.boomer.boomed_character) return;
         for (const c of this.characters) {
           const can_boom = this.boom_chances[c.name].opps.includes(
             this.data.indexOf(action)
@@ -183,7 +185,11 @@ class Chapter {
 
     this.die.land();
 
-    const explosion = this.boomer.boom(Chapter.CHARACTER_POSITIONS[position]);
+    const explosion = this.boomer.boom(
+      Chapter.CHARACTER_POSITIONS[position],
+      this.positions[position],
+      this.index
+    );
     await this.substitute_character({ target: null, position, quick: true });
     await explosion;
 
@@ -240,6 +246,12 @@ class Chapter {
     this.text_ui.show();
 
     if (this.should_progress()) {
+      if (
+        this.boomer.boomed_character &&
+        this.boomer.boomed_chapter === this.index
+      )
+        return this.end_scene();
+
       this.current_action++;
       if (!this.data[this.current_action]) return this.end_scene();
       this.execute_action(this.data[this.current_action]);
