@@ -17,8 +17,8 @@ Additional criteria: If anyone says "roll of the dice" they blow up (with bad gr
 Different endings (decided by the roll of a die, you can chose to override the roll to get the secret endings):
 *Endings are partially based on who boomed*
 
-- __Boom ending__: Either Lucy or Gryphon boomed so they grief for each other
-- __Neutral ending__: Amongus or gigachad booms and although the friends miss their comrade, the school is safe
+- __Grief ending 1__: Either Lucy or Gryphon boomed so they grief for each other
+- __Grief ending 2__: Amongus or gigachad booms and although the friends miss their comrade, the school is safe
 - __Good ending__: The policeman off screen booms and you see a small explosion in the background. None of the characters die and the school is saved 
 - __Perfect ending__: No one booms at all and you get a message on screen that the bomb has been defused
 - __Scary ending__: (triggered by an addional random event): you get teleported to the void where the game pretends to lag and you have to restart

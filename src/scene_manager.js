@@ -26,7 +26,11 @@ class SceneManager {
         backgrounds,
         music,
         boomer,
-        scenes: ['src/scenes/2-1.json']
+        scenes: [
+          'src/scenes/2-1.json',
+          'src/scenes/2-2.json',
+          'src/scenes/2-3.json'
+        ]
       })
     ];
     this.current_chapter = 0;

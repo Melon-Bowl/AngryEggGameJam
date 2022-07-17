@@ -10,8 +10,277 @@
         "type": "speech",
         "target": "Gryphon",
         "text": "Weird, I've only seen 14 bugs on my way here. I wonder what's going on?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I feel like something's not right here..."
+      },
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Whew, I was so nervous about the police search. Is no one going to talk about that??"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "The bugs here are all gone even though it feels like the perfect place for them to infest... so strange."
+      },
+      {
+        "type": "sub",
+        "target": "Amogus",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Lets' look fro the bobm guys I dont want to stay her e for longer than we have two."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Heeeey, I'm being ignored again..."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "It's ok Lucy, I agree the police search was quite stressful."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "shush."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Lets spli't up, each person goes a differrernt corener and contemplates thier life choices."
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "I'll leave you to it big guy. I'm going to check the storage room 💀"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Chad, wait up!"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "What is bug guy?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I'll check the storage room with you. There might be bug colonies under old equipment that could tell us something!"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "OK 👌"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "It seems everyone went their separate ways to search for clues. I'll look around and see if anyone needs help."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "I'll go see if Lucy needs any help, it might be worth trying to build trust with her."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Hey Lucy how are you doing?"
+      },
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "shush."
+      },
+      {
+        "type": "speech",
+        "target": "You.",
+        "text": "Why do you keep doing that to me?"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "shush."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Playing hard to get are we?"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "What was the deal with Gryphon back at the cafeteria?"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "That's none of your business. I don't even know who you are."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "I'm me, nice to meet you."
+      },
+      {
+        "type": "sub",
+        "target": "Amogus",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Hi ,me, Im' dad !"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Ok I'm sorry."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Well at least we can agree that Amogus isn't funny."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Yeah."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Gryphon seems to trust you. How'd you manage that?"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "He's the first person I met when I came here, he found me on the ground and thought I was an oversized ant."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "That sounds.. believable enough."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "I explained to him that I'm human and don't know where I am. He seemed to be in a good mood so he helped me."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "And what did you do in return for him?"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "I see.. well you have to pay him back somehow, someday. If you don't, you'll have me on your case."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Haha, I will make sure not to stay in his debt forever."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Good. Maybe you're not as bad as I thought stranger."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "I smile at Lucy and begin to walk away."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Stop slacking off and start searching.. teammate."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
       }
-  
     ]
   }
   
