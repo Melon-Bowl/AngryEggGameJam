@@ -32,9 +32,8 @@ class Chapter {
   }
 
   start_next_scene(to_scene) {
-    const scene_index = to_scene || this.current_scene + 1;
-    this.current_scene = scene_index;
-    const scene = this.scenes[scene_index];
+    this.current_scene = to_scene;
+    const scene = this.scenes[to_scene];
     this.background = scene.background;
     this.data = scene.actions;
     this.current_action = -1;
