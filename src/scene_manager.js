@@ -5,6 +5,7 @@ class SceneManager {
   constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
     this.boomer = boomer;
+    this.music = music;
 
     this.menu = new MenuManager({ backgrounds });
 
@@ -162,7 +163,7 @@ class SceneManager {
         await this.fade('out', 4);
         if (this.boomer.boomed_character) break;
       }
-
+      this.music.stop();
       this.current_chapter++;
     }
     this.state = 'end';

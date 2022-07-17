@@ -10,20 +10,19 @@ class Tracks {
     ];
     this.audio_tracks = [];
 
+    this.current_song = null;
+    this.current_track = null;
+
     this.sound_names = ['boom4.wav'];
     this.sounds = [];
 
     this.path = 'assets/music/';
-    this.local_sound;
-    this.trackPlaying = false;
-    this.song_to_play = null;
   }
 
   preload() {
     soundFormats('mp3');
     for (const name in this.tracks) {
-      this.local_sound = loadSound(this.path + this.tracks[name]);
-      this.audio_tracks.push(this.local_sound);
+      this.audio_tracks.push(loadSound(this.path + this.tracks[name]));
     }
 
     soundFormats('wav');
@@ -31,19 +30,21 @@ class Tracks {
   }
 
   play_track(song) {
+    if (song === this.current_song) return;
+    this.current_song = song;
+
+    if (this.current_track) this.stop();
+
     const track_to_find = `assets/music/${song}.mp3`;
-    for (const track in this.audio_tracks) {
-      if (this.audio_tracks[track].url === track_to_find) {
-        this.song_to_play = this.audio_tracks[track];
-        break;
-      }
-    }
-    if (this.trackPlaying === false) {
-      this.song_to_play.setVolume(0.3);
-      this.song_to_play.setLoop(true);
-      this.song_to_play.play();
-    }
-    this.trackPlaying = true;
+    this.current_track = this.audio_tracks.find(t => t.url === track_to_find);
+
+    this.current_track.setVolume(0.3);
+    this.current_track.setLoop(true);
+    this.current_track.play();
+  }
+
+  stop() {
+    this.current_track.stop();
   }
 
   play_sound(sfx) {
