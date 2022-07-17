@@ -100,7 +100,7 @@
       {
         "type": "texture",
         "target": "Gryphon",
-        "text": "angry"
+        "texture": "angry"
       },
       {
         "type": "speech",
@@ -115,7 +115,7 @@
       {
         "type": "texture",
         "target": "Gryphon",
-        "text": "neutral"
+        "texture": "neutral"
       },
       {
         "type": "speech",
