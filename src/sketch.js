@@ -1,6 +1,6 @@
 const text_ui = new TextBox();
 
-const background_files = ['school.png', 'school_building.jpg', 'staff_room.jpg', 'cafeteria.jpg'];
+const background_files = ['school.png', 'school_building.jpg', 'staff_room.jpg', 'cafeteria.jpg', 'sports_hall.jpg'];
 const backgrounds = {};
 
 const music = new Tracks();

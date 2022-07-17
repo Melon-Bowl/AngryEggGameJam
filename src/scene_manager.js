@@ -17,6 +17,16 @@ class SceneManager {
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
         ]
+      }),
+      new Chapter({
+        text_ui,
+        characters,
+        backgrounds,
+        music,
+        boomer,
+        scenes: [
+          'src/scenes/2-1.json',
+        ]
       })
     ];
     this.current_chapter = 0;

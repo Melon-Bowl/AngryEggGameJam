@@ -1,0 +1,17 @@
+{
+    "background": "sports_hall.jpg",
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Weird, I've only seen 14 bugs on my way here. I wonder what's going on?"
+      }
+  
+    ]
+  }
+  
