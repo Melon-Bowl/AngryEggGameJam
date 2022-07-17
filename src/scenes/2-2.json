@@ -1,0 +1,216 @@
+{
+    "background": "storage.jpg",
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Wow this place is even worse than the sports hall."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "This place so dead, I thought there would at least be some old gym stuff left in here."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Why would they leave perfectly fine equipment just to rot it wouldn't make any sense."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Steel dumbbells don't care about rot or bacteria, they are there for you to lift them. No matter the place or the time 😎🏋️‍♂️"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Yeah so why would they leave it in the sports hall that's off premises for students?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Oh I know! The bugs could lift them! They could get swole and then challenge the human race!!"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Hey there, what brings you here?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Oh hi oversized ant! Didn't see you there."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Yo! Lucy told me to help out so I decided to see how you guys were doing."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "We're doing fine. I'm a bit sad that there are less bugs than I expected. But we waddle."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "It doesn't look like there is anything that could help us with our search 🔎 here."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Honestly this place is kind of spooky, I would rather not hand around here for too long."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "I'll go around and check all the corners and walls of the room just to make sure. You two can wait here."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Sure, thanks Chad!"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Hey Gryphon, do you mind if I ask you a personal question?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Sure AntMan fire away!"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "What do you think of Lucy?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I think she is a very lovely lady! Even though she's human and not an arachnid, she can still send my spider senses tingling."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "I see..."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "So what's your relationship like with Lucy?"
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Isn't it obvious? They are head over heels for each other. You should be able to tell that just by looking at them bro."
+      },
+      {
+        "type": "texture",
+        "target": "Gryphon",
+        "texture": "angry"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I'm not head over heels for anybody!! All I'm interested in is my bug collection and.. and..."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "I see, so its complicated"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "They'll understand eventually. Nothing for us to do here. You shouldn't pry any deeper or you might make Gryphon really angry, and even' I'm scared of that 🥶."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Hey what are you two blabbering your mouths about?!!?! Spit it out and tell me straight or else."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Gryphon pulls out his box of centipedes very threateningly. I understand and begin to slowly back away."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Sorry Gryphon, I'll leave you alone."
+      },
+      {
+        "type": "texture",
+        "target": "Gryphon",
+        "texture": "neutral"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "It's all right haha I was just playing around."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "It is said that every joke has an ounce of truth in it."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Ahaha maybe so. *stare*"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Alright since there is nothing else here I suppose we should reconvene in the sports hall."
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Factual information my G, let us commence forth."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "That seems to have gone well. I feel like I got a bit closer to Chad and Gryphon."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "I don't want to stay in this room alone. I should get going."
+      }
+    ]
+}
+  

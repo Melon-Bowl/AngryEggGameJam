@@ -18,6 +18,21 @@
       },
       {
         "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "We decided to search here because its the last place left to search, so let's get it done quickly."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "It's also the most suspicious looking place in the school. But I was hoping I would find more bugs here..."
+      },
+      {
+        "type": "sub",
         "target": "Lucy",
         "position": 1
       },
@@ -42,6 +57,11 @@
         "text": "Lets' look fro the bobm guys I dont want to stay her e for longer than we have two."
       },
       {
+        "type": "texture",
+        "target": "Lucy",
+        "texture": "angry"
+      },
+      {
         "type": "speech",
         "target": "Lucy",
         "text": "Heeeey, I'm being ignored again..."
@@ -50,6 +70,11 @@
         "type": "speech",
         "target": "You",
         "text": "It's ok Lucy, I agree the police search was quite stressful."
+      },
+      {
+        "type": "texture",
+        "target": "Lucy",
+        "texture": "neutral"
       },
       {
         "type": "speech",
@@ -170,6 +195,11 @@
         "type": "speech",
         "target": "You",
         "text": "I'm me, nice to meet you."
+      },
+      {
+        "type": "texture",
+        "target": "Amogus",
+        "texture": "neutral"
       },
       {
         "type": "sub",

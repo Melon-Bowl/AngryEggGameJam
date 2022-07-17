@@ -1,0 +1,221 @@
+{
+    "background": "hallway.jpg",
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "I guess we've searched most of the school and the most suspicious place we could think of."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Yeah and we've still found nothing!"
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "It's probably for the best. Imagine what would have happened if we did find something. Wouldn't have been pleasant."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "True."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Guys I feel like we're still in danger so stay on your toes."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Guys, i dont have] toes :<"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Really, that's a shame. But who?"
+      },
+      {
+        "type": "sub",
+        "target": "Amogus",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Amogus nooo don't fall for it!!!"
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Who hwhat??"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Who. A s k e d ? :))))"
+      },
+      {
+        "type": "texture",
+        "target": "Amogus",
+        "texture": "angry"
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "REEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE"
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "I canno't believe I fell for it for the 128th time grrrr >:(((("
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Lucy you wlil pay fro this you witch I will, I will... I will!!!!"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Amogus stromed off to the side. He's just standing there looking at the wall furiously."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Does this happen a lot?"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Well it's happened 128 times already. This is the first time I've done it to him though."
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "That wasn't very homie of you Lucy."
+      },
+      {
+        "type": "texture",
+        "target": "Lucy",
+        "texture": "angry"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Okay Chad, and who asked you??"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "I don't need anyone's permission to state my opinion 😎"
+      },
+      {
+        "type": "texture",
+        "target": "Lucy",
+        "texture": "neutral"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "heh."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "No no, he's got a point."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Whatever.."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Let's go for another round of brioche how about that?"
+      },
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Actually I want to try a pretzel this time."
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Yay pretzel fren!!"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "I said I would try it, not that I like it!"
+      },
+      {
+        "type": "speech",
+        "target": "Amogus",
+        "text": "Its ok I promeise you'll love it !!"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Let us commence forth once again 😎"
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Seems like everything's resolved itself..."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "More or less at least."
+      }
+    ]
+}
+  
