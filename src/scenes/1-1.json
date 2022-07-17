@@ -1,5 +1,5 @@
 {
-  "background": "school.png",
+  "background": "school_building.jpg",
   "actions": [
     {
       "type": "play_sound"
