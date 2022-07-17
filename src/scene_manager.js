@@ -22,7 +22,7 @@ class SceneManager {
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
         ],
-        total_boom_chances: [0, 0.9, 0.9]
+        total_boom_chances: [0, 0, 0]
       }),
       new Chapter({
         index: 1,
@@ -32,12 +32,23 @@ class SceneManager {
         music,
         boomer,
         die,
-        total_boom_chances: [0],
+        total_boom_chances: [0.9, 0.9, 0.9],
         scenes: [
           'src/scenes/2-1.json',
           'src/scenes/2-2.json',
           'src/scenes/2-3.json'
         ]
+      }),
+      new EndChapter({
+        index: 2,
+        text_ui,
+        characters,
+        backgrounds,
+        music,
+        boomer,
+        die,
+        total_boom_chances: [0],
+        scenes: ['src/scenes/1-1.json']
       })
     ];
     this.current_chapter = 0;
@@ -115,15 +126,19 @@ class SceneManager {
 
       let prev_history = [];
       let scenes_to_show = [];
-      if (cache && cache.chapter === this.current_chapter) {
-        scenes_to_show = chapter.scenes
-          .map((a, i) => i)
-          .filter(i => !cache.scenes.includes(i));
-        shuffle(scenes_to_show, true);
-        prev_history = cache.scenes.slice(0, cache.scenes.length - 1);
-        scenes_to_show.unshift(cache.scenes[cache.scenes.length - 1]);
+      if (chapter instanceof EndChapter) {
+        scenes_to_show = [...chapter.scenes];
       } else {
-        scenes_to_show = shuffle(chapter.scenes.map((a, i) => i));
+        if (cache && cache.chapter === this.current_chapter) {
+          scenes_to_show = chapter.scenes
+            .map((a, i) => i)
+            .filter(i => !cache.scenes.includes(i));
+          shuffle(scenes_to_show, true);
+          prev_history = cache.scenes.slice(0, cache.scenes.length - 1);
+          scenes_to_show.unshift(cache.scenes[cache.scenes.length - 1]);
+        } else {
+          scenes_to_show = shuffle(chapter.scenes.map((a, i) => i));
+        }
       }
 
       for (const scene_index of scenes_to_show) {
