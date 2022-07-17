@@ -6,7 +6,9 @@ class StorageManager {
   static START_Y = -10;
   static END_Y = 30;
 
-  constructor() {
+  constructor({ boomer }) {
+    this.boomer = boomer;
+
     this.toast_active = false;
     this.transition_mode = null;
     this.transition_progress = 0;
@@ -16,9 +18,15 @@ class StorageManager {
   read_from_cache() {
     const val = localStorage.getItem(StorageManager.CACHE_KEY);
     if (!val) return null;
-    const { chapter, scenes, timestamp } = JSON.parse(val);
+    const { chapter, scenes, boomed_character, timestamp } = JSON.parse(val);
     if (new Date() - timestamp > 1000 * 3600 * 3) return null;
     this.send_toast();
+
+    if (chapter === 2 && boomed_character) {
+      this.boomer.boomed_character = boomed_character;
+      this.boomer.boomed_chapter = 1;
+    }
+
     return { chapter, scenes };
   }
 
@@ -28,6 +36,7 @@ class StorageManager {
       JSON.stringify({
         chapter,
         scenes,
+        boomed_character: this.boomer.boomed_character || null,
         timestamp: new Date()
       })
     );

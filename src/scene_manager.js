@@ -2,34 +2,56 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds, music, boomer, store }) {
+  constructor({ text_ui, characters, backgrounds, music, boomer, store, die }) {
     this.store = store;
+    this.boomer = boomer;
 
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
       new Chapter({
+        index: 0,
         text_ui,
         characters,
         backgrounds,
         music,
         boomer,
+        die,
         scenes: [
           'src/scenes/1-1.json',
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
-        ]
+        ],
+        total_boom_chances: [0, 0, 0]
       }),
       new Chapter({
+        index: 1,
         text_ui,
         characters,
         backgrounds,
         music,
         boomer,
+        die,
+        total_boom_chances: [0.9, 0.9, 0.9],
         scenes: [
           'src/scenes/2-1.json',
           'src/scenes/2-2.json',
           'src/scenes/2-3.json'
+        ]
+      }),
+      new EndChapter({
+        index: 2,
+        text_ui,
+        characters,
+        backgrounds,
+        music,
+        boomer,
+        die,
+        total_boom_chances: [0],
+        scenes: [
+          'src/scenes/3-1.json',
+          'src/scenes/3-2.json',
+          'src/scenes/3-3.json'
         ]
       })
     ];
@@ -108,28 +130,37 @@ class SceneManager {
 
       let prev_history = [];
       let scenes_to_show = [];
-      if (cache && cache.chapter === this.current_chapter) {
-        scenes_to_show = chapter.scenes
-          .map((a, i) => i)
-          .filter(i => !cache.scenes.includes(i));
-        shuffle(scenes_to_show, true);
-        prev_history = cache.scenes.slice(0, cache.scenes.length - 1);
-        scenes_to_show.unshift(cache.scenes[cache.scenes.length - 1]);
+      if (chapter instanceof EndChapter) {
+        scenes_to_show = [...chapter.scenes];
       } else {
-        scenes_to_show = shuffle(chapter.scenes.map((a, i) => i));
+        if (cache && cache.chapter === this.current_chapter) {
+          scenes_to_show = chapter.scenes
+            .map((a, i) => i)
+            .filter(i => !cache.scenes.includes(i));
+          shuffle(scenes_to_show, true);
+          prev_history = cache.scenes.slice(0, cache.scenes.length - 1);
+          scenes_to_show.unshift(cache.scenes[cache.scenes.length - 1]);
+        } else {
+          scenes_to_show = shuffle(chapter.scenes.map((a, i) => i));
+        }
       }
 
       for (const scene_index of scenes_to_show) {
-        const scene = chapter.start_next_scene(scene_index);
-        this.store.save_to_cache(this.current_chapter, [
+        const scene_history = [
           ...prev_history,
           ...scenes_to_show.slice(0, scenes_to_show.indexOf(scene_index) + 1)
-        ]);
+        ];
+        const scene = chapter.start_next_scene(
+          scene_index,
+          scene_history.length - 1
+        );
+        this.store.save_to_cache(this.current_chapter, scene_history);
         await this.fade('in');
         chapter.allowed_to_progress = true;
         await scene;
         chapter.allowed_to_progress = false;
         await this.fade('out', 4);
+        if (this.boomer.boomed_character) break;
       }
 
       this.current_chapter++;
