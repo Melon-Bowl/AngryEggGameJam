@@ -1,0 +1,152 @@
+{
+    "background": "graveyard.jpg",
+    "ending_name": "Amogus",
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Lucy",
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "You guys gave him hate but he was a nice bloke at heart."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Nah, he won't be missed."
+      },
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "Agreed"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "I agree with Chad, I think you two are being too harsh on poor Amogus."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "It could have been any of us."
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "And yet the one who died was the least significant."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "Must be fate."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "Seems like good RNG for once."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "What?"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "What?"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "What?"
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "Guys take this more seriously, one of our friends just perished 🪦"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "F"
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "F"
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "F o7"
+      },
+      {
+        "type": "speech",
+        "target": "Gryphon",
+        "text": "What's o7?"
+      },
+      {
+        "type": "speech",
+        "target": "Chad",
+        "text": "It's like a salute. To our fallen comrade. o7 and godspeed Amogus."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "You will be missed."
+      },
+      {
+        "type": "text",
+        "target": "",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "Somehow I feel like this could have far worse..."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
+      }
+    ]
+}
+  
