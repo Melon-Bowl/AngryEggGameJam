@@ -1,0 +1,12 @@
+{
+    "background": "storage.jpg",
+    "ending_name": "Gryphon",
+    "actions": [
+      {
+        "type": "sub",
+        "target": "Gryphon",
+        "position": 0
+      }
+    ]
+}
+  

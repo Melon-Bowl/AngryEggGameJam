@@ -8,7 +8,9 @@ const background_files = [
   'cafeteria.jpg', 
   'sports_hall.jpg', 
   'storage.jpg',
-  'hallway.jpg'
+  'hallway.jpg',
+  'candles.jpg',
+  'graveyard.jpg'
 ];
 const backgrounds = {};
 
