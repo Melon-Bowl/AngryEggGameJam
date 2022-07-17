@@ -1,3 +1,4 @@
+const store = new StorageManager();
 const text_ui = new TextBox();
 
 const background_files = ['school.png', 'school_building.jpg', 'staff_room.jpg', 'cafeteria.jpg', 'sports_hall.jpg'];
@@ -9,7 +10,7 @@ const boomer = new BoomController({ music });
 const characters = [
   new Character('Amogus', {
     neutral: 'assets/characters/amogus.png',
-    angry: 'assets/characters/amogus_angry.png',
+    angry: 'assets/characters/amogus_angry.png'
   }),
   new Character('Gryphon', {
     neutral: 'assets/characters/gryphon.png',
@@ -31,7 +32,8 @@ const scene_man = new SceneManager({
   characters,
   backgrounds,
   music,
-  boomer
+  boomer,
+  store
 });
 
 const die = new DieController();
@@ -64,4 +66,5 @@ function draw() {
   cursor();
   scene_man.show();
   die.show();
+  store.show();
 }

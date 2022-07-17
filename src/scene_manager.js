@@ -2,7 +2,9 @@ class SceneManager {
   static CHAPTER_TITLE_DURATION = 1500;
   static DEFAULT_FADE_SPEED = 1;
 
-  constructor({ text_ui, characters, backgrounds, music, boomer }) {
+  constructor({ text_ui, characters, backgrounds, music, boomer, store }) {
+    this.store = store;
+
     this.menu = new MenuManager({ backgrounds });
 
     this.chapters = [
@@ -81,26 +83,34 @@ class SceneManager {
   }
 
   async setup() {
-    this.state = 'menu';
-    await this.menu.wait_for_play();
-    await this.fade('out', 5);
+    const cache = this.store.read_from_cache();
+    if (!cache) {
+      this.state = 'menu';
+      await this.menu.wait_for_play();
+      await this.fade('out', 5);
+    } else {
+      this.current_chapter = cache.chapter;
+    }
 
-    for (const chapter of this.chapters) {
+    for (const chapter of this.chapters.slice(this.current_chapter)) {
       this.state = 'title';
       await this.fade('in', 3);
       await timeout(SceneManager.CHAPTER_TITLE_DURATION);
       await this.fade('out', 4);
       this.state = 'in-scene';
-      for (let i = 0; i < chapter.scenes.length; i++) {
-        const scene = chapter.start_next_scene();
+      const start_index = cache ? cache.scene : 0;
+      for (let i = start_index; i < chapter.scenes.length; i++) {
+        const scene = chapter.start_next_scene(i === start_index ? i : null);
+        this.store.save_to_cache(this.current_chapter, chapter.current_scene);
         await this.fade('in');
         chapter.allowed_to_progress = true;
         await scene;
         chapter.allowed_to_progress = false;
         await this.fade('out', 4);
       }
-      this.state = 'end';
+      this.current_chapter++;
     }
+    this.state = 'end';
   }
 
   show_chapter_title() {
