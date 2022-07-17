@@ -132,7 +132,7 @@ class SceneManager {
       let prev_history = [];
       let scenes_to_show = [];
       if (chapter instanceof EndChapter) {
-        scenes_to_show = [...chapter.scenes];
+        scenes_to_show = chapter.scenes.length ? [0] : [];
       } else {
         if (cache && cache.chapter === this.current_chapter) {
           scenes_to_show = chapter.scenes
