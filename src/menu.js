@@ -68,7 +68,7 @@ class MenuManager {
     stroke(0, opacity);
     strokeWeight(5);
     text(`Don't say "Roll of the dice"`, width / 2, height * 0.2);
-    text(`Or you will boom!"`, width / 2, height * 0.3);
+    text(`Or you will boom!`, width / 2, height * 0.3);
 
     // Buttons
     textSize(40);
