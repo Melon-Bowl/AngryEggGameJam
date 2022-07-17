@@ -1,12 +1,168 @@
 {
-    "background": "storage.jpg",
+    "background": "candles.jpg",
     "ending_name": "Gryphon",
     "actions": [
       {
         "type": "sub",
-        "target": "Gryphon",
+        "target": "Lucy",
         "position": 0
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Everyone is quietly standing in a candle filled room."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "I..."
+      },
+      {
+        "type": "speech",
+        "target": "Lucy",
+        "text": "*crying*"
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Lucy seems to have burst out crying."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "She is sobbing very loudly"
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "She's holding a plastic box in her hands. I can see something moving inside."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "speech",
+        "target": "...",
+        "text": "Somehow I feel like I've failed Gryphon."
+      },
+      {
+        "type": "speech",
+        "target": "You",
+        "text": "..."
+      },
+      {
+        "type": "sub",
+        "target": "Chad",
+        "position": 1
+      },
+      {
+        "type": "text",
+        "target": "Chad",
+        "text": "Lucy, we're here for you if you want to talk."
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "*sobbing* I will never manage to tell him how I feel!"
+      },
+      {
+        "type": "text",
+        "target": "Chad",
+        "text": "It's okay Lucy, he knew. You both knew. But neither of you was ready to admit it."
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "That's what makes it so baadd!!!! *sobbing intensifies*"
+      },
+      {
+        "type": "text",
+        "target": "Lucy",
+        "text": "I will miss out on all the times I could have had with him."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "Lucy left sqeezing the box of spiders in her hands."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "text",
+        "target": "You",
+        "text": "I hope she'll be alright."
+      },
+      {
+        "type": "sub",
+        "target": "Amogus",
+        "position": 0
+      },
+      {
+        "type": "text",
+        "target": "Amogus",
+        "text": "She'll be fine, she has other critters to take care of now."
+      },
+      {
+        "type": "text",
+        "target": "You",
+        "text": "Those were spiders inside the box right?"
+      },
+      {
+        "type": "text",
+        "target": "Chad",
+        "text": "Yes. What a weird couple."
+      },
+      {
+        "type": "text",
+        "target": "You",
+        "text": "That they are. I wonder what they could have been."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "..."
+      },
+      {
+        "type": "text",
+        "target": "...",
+        "text": "Somehow I feel like this could have ended differently..."
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 0
+      },
+      {
+        "type": "sub",
+        "target": null,
+        "position": 1
       }
     ]
 }
+
   
