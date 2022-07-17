@@ -1,4 +1,6 @@
 class StorageManager {
+  static CACHE_KEY = 'angryegggame-boom-current-scene';
+
   static TOAST_SPEED = 3;
   static HOVER_DURATION = 2000;
   static START_Y = -10;
@@ -9,6 +11,26 @@ class StorageManager {
     this.transition_mode = null;
     this.transition_progress = 0;
     this.end_transition_callback = null;
+  }
+
+  read_from_cache() {
+    const val = localStorage.getItem(StorageManager.CACHE_KEY);
+    if (!val) return null;
+    const { chapter, scene, timestamp } = JSON.parse(val);
+    if (new Date() - timestamp > 1000 * 3600 * 3) return null;
+    this.send_toast();
+    return { chapter, scene };
+  }
+
+  save_to_cache(chapter, scene) {
+    localStorage.setItem(
+      StorageManager.CACHE_KEY,
+      JSON.stringify({
+        chapter,
+        scene,
+        timestamp: new Date()
+      })
+    );
   }
 
   get in_transition() {

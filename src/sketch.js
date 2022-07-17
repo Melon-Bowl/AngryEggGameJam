@@ -32,7 +32,8 @@ const scene_man = new SceneManager({
   characters,
   backgrounds,
   music,
-  boomer
+  boomer,
+  store
 });
 
 const die = new DieController();
@@ -59,7 +60,6 @@ function setup() {
   const cnv = createCanvas(800, 600);
   boomer.set_canvas(cnv);
   scene_man.setup();
-  store.send_toast();
 }
 
 function draw() {

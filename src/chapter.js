@@ -31,8 +31,10 @@ class Chapter {
     this.scenes = this.scene_files.map(s => loadJSON(s));
   }
 
-  start_next_scene() {
-    const scene = this.scenes[++this.current_scene];
+  start_next_scene(to_scene) {
+    const scene_index = to_scene || this.current_scene + 1;
+    this.current_scene = scene_index;
+    const scene = this.scenes[scene_index];
     this.background = scene.background;
     this.data = scene.actions;
     this.current_action = -1;
