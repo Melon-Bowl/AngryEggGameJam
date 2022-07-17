@@ -48,7 +48,11 @@ class SceneManager {
         boomer,
         die,
         total_boom_chances: [0],
-        scenes: ['src/scenes/1-1.json']
+        scenes: [
+          'src/scenes/3-1.json',
+          'src/scenes/3-2.json',
+          'src/scenes/3-3.json'
+        ]
       })
     ];
     this.current_chapter = 0;
