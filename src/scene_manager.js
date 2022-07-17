@@ -26,9 +26,7 @@ class SceneManager {
         backgrounds,
         music,
         boomer,
-        scenes: [
-          'src/scenes/2-1.json',
-        ]
+        scenes: ['src/scenes/2-1.json']
       })
     ];
     this.current_chapter = 0;
@@ -43,8 +41,13 @@ class SceneManager {
     this.end_button = new Button(
       'Play Again',
       [250, 600 * 0.55 - 30, 300, 60],
-      () => window.location.reload()
+      () => this.restart_game()
     );
+  }
+
+  restart_game() {
+    this.store.remove_cache();
+    window.location.reload();
   }
 
   get is_fading() {

@@ -33,6 +33,10 @@ class StorageManager {
     );
   }
 
+  remove_cache() {
+    localStorage.removeItem(StorageManager.CACHE_KEY);
+  }
+
   get in_transition() {
     return !!this.transition_mode;
   }
