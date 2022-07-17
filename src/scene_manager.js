@@ -6,6 +6,7 @@ class SceneManager {
     this.store = store;
     this.boomer = boomer;
     this.music = music;
+    this.die = die;
 
     this.menu = new MenuManager({ backgrounds });
 
@@ -117,6 +118,7 @@ class SceneManager {
     if (!cache) {
       this.state = 'menu';
       await this.menu.wait_for_play();
+      this.die.throw();
       await this.fade('out', 5);
     } else {
       this.current_chapter = cache.chapter;
@@ -125,6 +127,7 @@ class SceneManager {
     for (const chapter of this.chapters.slice(this.current_chapter)) {
       this.state = 'title';
       await this.fade('in', 3);
+      this.die.land();
       await timeout(SceneManager.CHAPTER_TITLE_DURATION);
       await this.fade('out', 4);
       this.state = 'in-scene';
@@ -157,15 +160,18 @@ class SceneManager {
         );
         this.store.save_to_cache(this.current_chapter, scene_history);
         await this.fade('in');
+        this.die.land();
         chapter.allowed_to_progress = true;
         await scene;
         chapter.allowed_to_progress = false;
+        if (!this.boomer.boomed_character) this.die.throw();
         await this.fade('out', 4);
         if (this.boomer.boomed_character) break;
       }
-      this.music.stop();
+      if (chapter.index < 2) this.music.stop();
       this.current_chapter++;
     }
+    this.die.land();
     this.state = 'end';
   }
 

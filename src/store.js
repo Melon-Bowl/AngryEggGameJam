@@ -90,7 +90,7 @@ class StorageManager {
     stroke(0);
     strokeWeight(1);
     textSize(20);
-    text('Retrieved current scene from storage', ...pos);
+    text('Restored current scene from storage', ...pos);
 
     this.update_transition();
   }
