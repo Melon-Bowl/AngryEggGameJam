@@ -19,7 +19,7 @@ class SceneManager {
           'src/scenes/1-2.json',
           'src/scenes/1-3.json'
         ],
-        total_boom_chance: 0.9
+        total_boom_chances: [0, 0.9, 0.9]
       }),
       new Chapter({
         text_ui,
@@ -27,7 +27,8 @@ class SceneManager {
         backgrounds,
         music,
         boomer,
-        scenes: ['src/scenes/2-1.json']
+        scenes: ['src/scenes/2-1.json'],
+        total_boom_chances: [0]
       })
     ];
     this.current_chapter = 0;
@@ -117,11 +118,15 @@ class SceneManager {
       }
 
       for (const scene_index of scenes_to_show) {
-        const scene = chapter.start_next_scene(scene_index);
-        this.store.save_to_cache(this.current_chapter, [
+        const scene_history = [
           ...prev_history,
           ...scenes_to_show.slice(0, scenes_to_show.indexOf(scene_index) + 1)
-        ]);
+        ];
+        const scene = chapter.start_next_scene(
+          scene_index,
+          scene_history.length - 1
+        );
+        this.store.save_to_cache(this.current_chapter, scene_history);
         await this.fade('in');
         chapter.allowed_to_progress = true;
         await scene;

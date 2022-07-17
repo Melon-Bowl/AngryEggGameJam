@@ -11,7 +11,7 @@ class Chapter {
     characters,
     backgrounds,
     boomer,
-    total_boom_chance = 0
+    total_boom_chances
   }) {
     this.scene_files = scenes;
     this.text_ui = text_ui;
@@ -19,7 +19,7 @@ class Chapter {
     this.backgrounds = backgrounds;
     this.music = music;
     this.boomer = boomer;
-    this.total_boom_chance = total_boom_chance;
+    this.total_boom_chances = total_boom_chances || this.scene_files.fill(0);
 
     if (!scenes || !scenes.length)
       throw new Error('Chapter must have story file');
@@ -43,12 +43,16 @@ class Chapter {
     this.scenes = this.scene_files.map(s => loadJSON(s));
   }
 
-  start_next_scene(to_scene) {
+  /**
+   * @param {Number} to_scene Scene to next show
+   * @param {Number} scene_index How many scenes have been shown from this chapter subtract 1
+   */
+  start_next_scene(to_scene, scene_index) {
     this.current_scene = to_scene;
     const scene = this.scenes[to_scene];
     this.background = scene.background;
     this.data = scene.actions;
-    this.calc_boom_chances();
+    this.calc_boom_chances(scene_index);
     this.current_action = -1;
     this.positions = [null, null, null];
     return new Promise(resolve => (this.end_scene = resolve));
@@ -109,12 +113,12 @@ class Chapter {
     return [p, opps];
   }
 
-  calc_boom_chances() {
+  calc_boom_chances(scene_index) {
     this.boom_chances = this.characters
       .map(c => c.name)
       .reduce((acc, cur) => {
         const [p, opps] = this.calc_individual_boom_prob(
-          this.total_boom_chance,
+          this.total_boom_chances[scene_index],
           cur
         );
         return { ...acc, [cur]: { p, opps } };
@@ -130,7 +134,6 @@ class Chapter {
           const can_boom = this.boom_chances[c.name].opps.includes(
             this.data.indexOf(action)
           );
-          console.log(c.name, can_boom, this.boom_chances[c.name].p);
           if (can_boom && Math.random() < this.boom_chances[c.name].p) {
             this.boom(this.positions.indexOf(c.name));
             return;
