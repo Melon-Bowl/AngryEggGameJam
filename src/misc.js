@@ -39,3 +39,5 @@ http://creativecommons.org/licenses/by/4.0/
 Bug facts:
 https://facts.net/bug-facts/
 `.split('\n');
+
+const GAME_VERSION = '1.0.0';

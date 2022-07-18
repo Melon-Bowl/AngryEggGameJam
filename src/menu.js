@@ -69,6 +69,12 @@ class MenuManager {
     text(`Don't say "Roll of the dice"`, width / 2, height * 0.2);
     text(`Or you will boom!`, width / 2, height * 0.3);
 
+    // Version
+    textAlign(LEFT, BOTTOM);
+    textSize(16);
+    strokeWeight(3);
+    text('Version ' + GAME_VERSION, 10, height - 10);
+
     // Buttons
     textSize(40);
     this.buttons.forEach(b => b.show(opacity));
